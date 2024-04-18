@@ -30,7 +30,8 @@ nav > a {
 /* Media query para telas pequenas */
 @media screen and (max-width: 200px) {
   nav > a {
-    margin-right: 5px; /* Altera o margin para 1px em telas pequenas */
+    margin-right: 1px; /* Altera o margin para 1px em telas pequenas */
+    font-size: 10px;
   }
 }
 main {
