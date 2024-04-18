@@ -14,11 +14,6 @@ main > a {
   background-color: black;
 
 } 
-nav {
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
 
 nav > a {
   text-decoration: none;
