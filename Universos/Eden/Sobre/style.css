@@ -26,7 +26,7 @@ nav > a {
 @media screen and (max-width: 600px) {
 
 nav > a {
-  margin-right: 1px; /* Reduz o espaço entre os links */
+  margin-right: 30px; /* Reduz o espaço entre os links */
   font-size: 20px; /* Ajusta o tamanho da fonte para torná-la mais legível */
 }
 }
