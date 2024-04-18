@@ -7,6 +7,7 @@ header{
 background-color: black;
 font-family: 'Times New Roman', Times, serif; 
 padding: 10px;
+margin: auto;
 }
 main > a {
   background-color: black;
@@ -15,7 +16,6 @@ main > a {
 nav {
   display: flex;
   justify-content: center; /* Isso centraliza os itens horizontalmente */
-  margin: auto;
 }
 
 nav > a {
@@ -26,13 +26,6 @@ nav > a {
   font-weight: bold;
   padding: 5px;
   margin-right: 20px;
-}
-
-/* Media query para telas pequenas */
-@media screen and (max-width: 600px) {
-  nav > a {
-    margin-right: 10px; /* Altera o margin para 1px em telas pequenas */
-  }
 }
 main {
   align-items: center;
