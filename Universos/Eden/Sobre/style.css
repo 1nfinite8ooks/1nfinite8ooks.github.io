@@ -16,6 +16,8 @@ main > a {
 } 
 nav {
   display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 nav > a {
