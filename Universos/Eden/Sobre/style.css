@@ -20,9 +20,9 @@ nav > a {
     padding: 5px;
     margin-right: 20px;
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 600px) {
   nav > a {
-    margin-right: 1px; /* Altera o margin para 1px em telas pequenas */
+    margin-right: 10px; /* Altera o margin para 1px em telas pequenas */
   }
 }
 main {
