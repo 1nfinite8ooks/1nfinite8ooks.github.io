@@ -22,7 +22,8 @@ nav > a {
 }
 @media screen and (max-width: 600px) {
   nav > a {
-    margin-right: 10px; /* Altera o margin para 1px em telas pequenas */
+    margin-right: 1px; /* Altera o margin para 1px em telas pequenas */
+    font-size: 6px;
   }
 }
 main {
