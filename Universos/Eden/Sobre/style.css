@@ -13,15 +13,20 @@ main > a {
   background-color: black;
 
 }
+nav {
+  display: flex;
+  justify-content: center; /* Isso centraliza os itens horizontalmente */
+}
+
 nav > a {
   text-decoration: none;
+  display: flex; /* Adicionamos display flex para alinhar verticalmente */
   align-items: center;
   color: white;
   font-weight: bold;
   padding: 5px;
   margin-right: 20px;
 }
-
 main {
   align-items: center;
   background-color: white;
