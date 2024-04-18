@@ -7,7 +7,6 @@ header{
 background-color: black;
 font-family: 'Times New Roman', Times, serif; 
 padding: 10px;
-margin: 20px;
 }
 main > a {
   background-color: black;
@@ -16,6 +15,7 @@ main > a {
 nav {
   display: flex;
   justify-content: center; /* Isso centraliza os itens horizontalmente */
+  margin: auto;
 }
 
 nav > a {
