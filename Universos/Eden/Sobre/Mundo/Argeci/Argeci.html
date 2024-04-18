@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argeci</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <header>
+            <header>
+                <img src="Eden logo.png" alt="">
+                <nav>
+            <a href="Sobre/Sobre.html">✦ Sobre</a>
+            <a href="Comics/Comics.html">✦ Comics</a>
+            <a href="Jogos/Jogos.html">✦ Jogos</a> 
+            <a href="Mundo/Mundo.html">✦ Mundo</a>
+            <a href="Personagens/Personagens">✦ Personagens</a>
+            <a href="Galeria/Galeria.html">✦ Galeria</a>
+            </nav>
+        </header>
+      <main>
+          <section>
+            <article>
+                <h1><img src="Argecitext.png" alt=""></h1>
+            </article>
+            <article>
+                        <p>✦ Argeci é uma praia extremamente rica, muitos de lá moram longe um do outro, <br> porém em eventos ou para lazeres se encontram na costa para aproveitar o mar. <br> A população não se comunica entre si, raramente vem ao caso,<br> elas convivem em familia e distantes umas das outras, muitos morando <br> em brmansões extremamente longe. <br> Essa cidade é perfeita para turistas que buscam paz e solidão, <br> e de vez em quando, ir com a galera na praia.</p> 
+                        </p>Lá existem tantos comércios comuns e tanto os luxuosos, o centro da cidade é bem colorido <br> e de noite tem muitas luzes e decoração, <br>lá você pode encontrar feirinhas, ou até mesmo shoppings e restaurantes, <br> há poucos lazeres mas o suficiente pra deixar todos que vão pro centro acomodados e  satisfeitos.</p>
+                <div class="category">
+                    <h3>♜ Arquitetura e Estética</h3>
+                    <div class="category-content">
+                        <p>A estética de Argeci é variável, os ricos  geralmente moram moram em villa houses, mansões e praires. Os moradores comuns vivem em terraces houses, casas iguais do lado da outra, localizada no centro da cidade, e para os turistas existe um hotel luxuoso para se acomodar-se. É raro de se ver, mas tem habitantes que moram em barcos, que não estão só lá, mas sim, viajando o mundo inteiro!
+                        </p>
+                    </div>
+                </div>
+                <div class="category">
+                    <h3>⯍ População</h3>
+                    <div class="category-content">
+                        <p>A população é bem educada e formal, e uma parte é bem divertida e diversa, as duas partes não se dão muito bem, mas tem exceções!</p>
+                    </div>
+                </div>
+                <div class="category">
+                    <h3>🏠︎ Locais</h3>
+                    <div class="category-content">
+                        <p>Restaurante do leon <br>Centro <br>Praia</p>
+                    </div>
+                </div>
+          
+                </div>
+                <div class="category">
+                    <h3>🕮 Habitantes</h3>
+                    <div class="category-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <h3>⚑ Bandeira</h3>
+                <div class="category-content">
+                    <img src="Argeci.png" alt="" srcset="">
+                </div>
+            </div>
+            </div>
+            <script>
+                               const categories = document.querySelectorAll('.category');
+          categories.forEach(category => {
+            const title = category.querySelector('h3');
+            const content = category.querySelector('.category-content');
+          
+            title.addEventListener('click', () => {
+          if (content.style.display === 'block') {
+              content.style.display = 'none';
+          } else {
+              categories.forEach(c => {
+                  c.querySelector('.category-content').style.display = 'none';
+              });
+              content.style.display = 'block';
+          }
+            });
+          });
+            </script>
+            </article>
+            <p>Copyright © 2024 1nfinite8ooks. All rights reserved.</p>
+      </main>
+      
+</body>
+</html>

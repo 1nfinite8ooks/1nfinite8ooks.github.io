@@ -1,0 +1,57 @@
+body {
+    text-align: center;
+    background-color: black;
+    font-size: 20px;
+}
+header{
+background-color: black;
+font-family: 'Times New Roman', Times, serif; 
+padding: 10px;
+margin: auto;
+}
+
+
+main {
+    align-items: center;
+
+    background-color: white;
+    width: 1200px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 20px;
+}
+@media screen and (max-width: 500px) {
+    main {
+      width: 450px;
+      margin: 0 auto; /* Para centralizar o conteúdo */
+    }
+  }
+  main img {
+    max-width: 100%;
+    height: auto; }
+  /* Estilos para telas médias (entre 450px e 1200px) */
+  @media screen and (min-width: 451px) and (max-width: 1199px) {
+    main {
+      width: 100%; /* Use a largura total da tela */
+      padding: 0 20px; /* Adicione algum espaço de preenchimento nas laterais */
+      box-sizing: border-box; /* Certifique-se de que o preenchimento não aumenta a largura total */
+    }
+  }
+
+  footer {
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+    width: 100%; /* Alterado para largura total */
+    max-width: 1200px; /* Define uma largura máxima */
+    height: 20px;
+    margin: 20px auto; /* Adicionado espaçamento nas laterais */
+    border-radius: 20px;
+}
+
+/* Estilos para telas pequenas */
+@media screen and (max-width: 450px) {
+    footer {
+        padding: 10px; /* Adiciona algum espaço interno */
+    }
+}

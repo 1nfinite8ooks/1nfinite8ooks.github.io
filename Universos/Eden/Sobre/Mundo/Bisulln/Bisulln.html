@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bisulln</title>
+</head>
+<body>
+    <body>
+        <header>
+            <header>
+                <img src="Eden logo.png" alt="">
+                <nav>
+            <a href="Sobre/Sobre.html">✦ Sobre</a>
+            <a href="Comics/Comics.html">✦ Comics</a>
+            <a href="Jogos/Jogos.html">✦ Jogos</a> 
+            <a href="Mundo/Mundo.html">✦ Mundo</a>
+            <a href="Personagens/Personagens">✦ Personagens</a>
+            <a href="Galeria/Galeria.html">✦ Galeria</a>
+            </nav>
+        </header>
+        <main>
+            <section>
+              <article>
+                  <h1><img src="Amaldrictext.png" alt=""></h1>
+              </article>
+              <article>
+                          <p>✦. 
+                        </p>
+                  <div class="category">
+                      <h3>♜ Arquitetura e Estética</h3>
+                      <div class="category-content">
+                          <p>.
+                          </p>
+                      </div>
+                  </div>
+                  <div class="category">
+                      <h3>⯍ População</h3>
+                      <div class="category-content">
+                          <p>.</p>
+                      </div>
+                  </div>
+                  <div class="category">
+                      <h3>🏠︎ Locais</h3>
+                      <div class="category-content">
+                          <p>.</p>
+                      </div>
+                  </div>
+            
+                  </div>
+                  <div class="category">
+                      <h3>🕮 Habitantes</h3>
+                      <div class="category-content">
+                          <p>.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="category">
+                  <h3>⚑ Bandeira</h3>
+                  <div class="category-content">
+                      <img src="#" alt="" srcset="">
+                  </div>
+              </div>
+              </div>
+              <script>
+            const categories = document.querySelectorAll('.category');
+            categories.forEach(category => {
+              const title = category.querySelector('h3');
+              const content = category.querySelector('.category-content');
+            
+              title.addEventListener('click', () => {
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                categories.forEach(c => {
+                    c.querySelector('.category-content').style.display = 'none';
+                });
+                content.style.display = 'block';
+            }
+              });
+            });
+              </script>
+              </article>
+              <p>Copyright © 2024 1nfinite8ooks. All rights reserved.</p>
+        </main>
+</body>
+</html>

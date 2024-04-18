@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seanun</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nisbhore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snow Effect</title>
+<style>
+    .body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      
+    }
+
+    .water-effect {
+        position: fixed;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to bottom, rgba(16, 88, 135, 0.6) 0%, transparent 100%);
+      animation: waterEffect 10s linear infinite;
+      pointer-events: none; /* Impede que a div receba eventos de clique */
+      z-index: -1; /* Coloca a água atrás de outros elementos */
+    }
+
+    @keyframes waterEffect {
+      0% {
+        transform: translateY(100%);
+      }
+      25% {
+        transform: translateY(15%);
+      }
+      75% {
+        transform: translateY(15%);
+      }
+      100% {
+        transform: translateY(100%);
+      }
+    }
+  </style>
+</head>
+<body>
+    <div class="water-effect"></div>
+    
+            <header>
+                <img src="Eden logo.png" alt="">
+                <nav>
+            <a href="Sobre/Sobre.html">✦ Sobre</a>
+            <a href="Comics/Comics.html">✦ Comics</a>
+            <a href="Jogos/Jogos.html">✦ Jogos</a>
+            <a href="Mundo/Mundo.html">✦ Mundo</a>
+            <a href="Personagens/Personagens">✦ Personagens</a>
+            <a href="Galeria/Galeria.html">✦ Galeria</a>
+            </nav>
+                </header>
+                <main>
+            <section>
+                
+              <article>
+                  <h1><img src="Seanuntext.png" alt=""></h1>
+              </article>
+              <article>
+                     
+                          <p>✦ Nisbhore é uma vila extremamente fria, onde é conhecida por ser rústica e ter costumes antigos, <br> um ótimo lugar para se morar para ter paz e tranquilidade... Bom, quase isso. <br> É uma comunidade muito humilde, a maioria da população segue os princípios de Sensus. <br> É uma comunidade extremamente pequena, sendo assim existe muitas poucas lojas, apenas uma escola, e poucas áreas de lazer. <br> Seus costumes são extremamente antigos e são mantidos por tradição e cultura,<br> vivem mandando cartas e fazendo as coisas manualmente. .
+                        </p>
+                  <div class="category">
+                      <h3>♜ Arquitetura e Estética</h3>
+                      <div class="category-content">
+                          <p>A estética de Nisbhore é bem rústica, as casas podem ser próximas como uma comunidade ou extremamente longe, com um estilo cottage, log cabin, igloo, e vitoriano.
+                          </p>
+                      </div>
+                  </div>
+                  <div class="category">
+                      <h3>⯍ População</h3>
+                      <div class="category-content">
+                          <p>A população muita das vezes podem morar juntos ou próximos, ou estar extremamente separados. Muitos são extremamente gentis e amigáveis, sempre ajudando aqueles que vieram de longe. Porém nem todos são amigáveis.. Alguns correm para as suas casas quando ele chega...</p>
+                      </div>
+                  </div>
+                  <div class="category">
+                      <h3>🏠︎ Locais</h3>
+                      <div class="category-content">
+                          <p>Restaurante do leon <br>Centro <br>Praia</p>
+                      </div>
+                  </div>
+            
+                  </div>
+                  <div class="category">
+                      <h3>🕮 Habitantes</h3>
+                      <div class="category-content">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="category">
+                  <h3>⚑ Bandeira</h3>
+                  <div class="category-content">
+                      <img src="Seanun.png" alt="" srcset="">
+                  </div>
+              </div>
+              </div>
+              <script>
+                                 const categories = document.querySelectorAll('.category');
+            categories.forEach(category => {
+              const title = category.querySelector('h3');
+              const content = category.querySelector('.category-content');
+            
+              title.addEventListener('click', () => {
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                categories.forEach(c => {
+                    c.querySelector('.category-content').style.display = 'none';
+                });
+                content.style.display = 'block';
+            }
+              });
+            });
+              </script>
+              </article>
+              <p>Copyright © 2024 1nfinite8ooks. All rights reserved.</p>
+                </main>
+        </div>
+</body>
+</html>

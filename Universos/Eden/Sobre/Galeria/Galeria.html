@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Galeria</title>
+</head>
+<body>
+    <header>
+        <header>
+            <img src="Eden logo.png" alt="">
+            <nav>
+        <a href="#">✦ Sobre</a>
+        <a href="Comics/Comics.html">✦ Comics</a>
+        <a href="Jogos/Jogos.html">✦ Jogos</a> 
+        <a href="Mundo/Mundo.html">✦ Mundo</a>
+        <a href="#">✦ Personagens</a>
+        <a href="Galeria/Galeria.html">✦ Galeria</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Galeria</h1>
+        <p>Aqui terá os desenhos que são feitos ao longo do tempo, será atualizado de pouco a <br>pouco e logo logo terão mais paginas! Siga até o final para ir para outras paginas.</p>
+        <h2>Aviso importante:</h2>
+        <p>Certos desenhos podem dar certos gatilhos, mas fique tranquilo, pois eles seram <br>tampados, apenas irá revelar o desenho se você clicar.</p>
+        
+        <div class="gallery"></div>
+        <div class="pagination"></div>
+        <p>Copyright © 2024 1nfinite8ooks. All rights reserved.</p>
+    </main> 
+   <script> 
+       const images = [
+        { src: 'img1.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img2.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img3.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img4.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img5.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img6.png', nsfw: false, gore: false, suicide: false, violence: true, abuse: false, mutilation: true, sensitive: true, nudity: true },
+        { src: 'img7.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img8.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img9.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img10.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img11.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img12.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img13.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img14.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img15.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img16.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img17.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img18.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img19.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img20.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img21.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img22.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img23.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img24.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img25.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img26.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img27.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img28.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img29.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img30.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img31.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false } ,
+        { src: 'img32.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img33.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false },
+        { src: 'img34.png', nsfw: false, gore: false, suicide: false, violence: false, abuse: false, mutilation: false, sensitive: false, nudity: false }
+    ];
+    const imagesPerPage = 10;
+    let currentPage = 0;
+
+    function showPage(page) {
+        const gallery = document.querySelector('.gallery');
+        gallery.innerHTML = '';
+        const startIndex = page * imagesPerPage;
+        const endIndex = startIndex + imagesPerPage;
+        const pageImages = images.slice(startIndex, endIndex);
+        pageImages.forEach((image) => {
+            const imgContainer = document.createElement('div');
+            imgContainer.classList.add('img-container');
+            const imgElement = document.createElement('img');
+            imgElement.src = image.src;
+            imgElement.alt = 'Image';
+            imgContainer.appendChild(imgElement);
+            const overlay = document.createElement('div');
+            overlay.classList.add('nsfw-overlay');
+            let warningText = '';
+            if (image.nsfw) warningText = 'NSFW';
+            if (image.gore) warningText = 'Gore';
+            if (image.suicide) warningText = 'Suicídio';
+            if (image.violence) warningText = 'Violência';
+            if (image.abuse) warningText = 'Abuso';
+            if (image.mutilation) warningText = 'Mutilação';
+            if (image.sensitive) warningText = 'Sensível';
+            if (image.nudity) warningText = 'Nudez';
+            if (warningText !== '') {
+                overlay.textContent = warningText;
+                imgContainer.appendChild(overlay);
+                overlay.addEventListener('click', () => {
+                    imgContainer.removeChild(overlay);
+                });
+            }
+            gallery.appendChild(imgContainer);
+        });
+    }
+
+    function renderPagination() {
+        const totalPages = Math.ceil(images.length / imagesPerPage);
+        const pagination = document.querySelector('.pagination');
+        pagination.innerHTML = '';
+        for (let i = 0; i < totalPages; i++) {
+            const pageLink = document.createElement('span');
+            pageLink.textContent = i + 1;
+            pageLink.classList.add('page-link');
+            if (i === currentPage) {
+                pageLink.classList.add('current-page');
+            }
+            pageLink.addEventListener('click', () => {
+                currentPage = i;
+                showPage(currentPage);
+                renderPagination();
+            });
+            pagination.appendChild(pageLink);
+        }
+    }
+
+    function init() {
+        showPage(currentPage);
+        renderPagination();
+    }
+
+    window.addEventListener('DOMContentLoaded', init);
+</script>
+
+</body>
+</html>
+</script>
+</body>
+</html>

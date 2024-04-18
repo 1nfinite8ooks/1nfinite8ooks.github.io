@@ -1,0 +1,503 @@
+body {
+    text-align: center;
+    background-color: black;
+    font-size: 20px;
+}
+header{
+background-color: black;
+font-family: 'Times New Roman', Times, serif; 
+padding: 10px;
+margin: auto;
+}
+main > a {
+    background-color: black;
+
+}
+nav > a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    margin-right: 20px;
+}
+nav:hover > a {
+text-decoration: underline;
+}
+main {
+    align-items: center;
+    background-color: white;
+    width: 1200px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 20px;
+}
+@media screen and (max-width: 500px) {
+    main {
+      width: 450px;
+      margin: 0 auto; /* Para centralizar o conteúdo */
+    }
+  }
+  main img {
+    max-width: 100%;
+    height: auto; }
+  /* Estilos para telas médias (entre 450px e 1200px) */
+  @media screen and (min-width: 451px) and (max-width: 1199px) {
+    main {
+      width: 100%; /* Use a largura total da tela */
+      padding: 0 20px; /* Adicione algum espaço de preenchimento nas laterais */
+      box-sizing: border-box; /* Certifique-se de que o preenchimento não aumenta a largura total */
+    }
+  }
+  .catalog {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+}
+.category {
+    margin-bottom: 10px;
+}
+.category h3 {
+    cursor: pointer;
+    margin: 0;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+.category-content {
+    display: none; /* Inicialmente oculto */
+    padding: 10px;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.category-content p {
+margin: 0;
+padding: 5px;
+background-color: #f0f0f0;
+white-space: nowrap; /* Impede que os links quebrem para a próxima linha */
+overflow-x: auto; /* Adiciona uma barra de rolagem horizontal se os links forem muito largos */
+}
+
+.category-content p a {
+display: inline-block; /* Permite que os links se comportem como blocos inline */
+margin-right: 5px; /* Adiciona um espaço entre os links */
+margin-bottom: 5px; /* Adiciona um espaço abaixo dos links */
+background-color: black;
+color: white;
+padding: 5px;
+border-radius: 5px;
+text-decoration: none; /* Remove o sublinhado padrão */
+}
+/* Centralizar conteúdo */
+.category-content {
+    padding-left: 20px; /* Adiciona um recuo para manter o conteúdo alinhado à esquerda */
+}
+  footer {
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+    width: 100%; /* Alterado para largura total */
+    max-width: 1200px; /* Define uma largura máxima */
+    height: 20px;
+    margin: 20px auto; /* Adicionado espaçamento nas laterais */
+    border-radius: 20px;
+}
+
+/* Estilos para telas pequenas */
+@media screen and (max-width: 450px) {
+    footer {
+        padding: 10px; /* Adiciona algum espaço interno */
+    }
+}
+
+.angelis {
+    position: relative;
+    display: inline-block;
+}
+.angelis .angelisinfo {
+        visibility: hidden;
+        width: 300px;
+        background-color: rgb(255, 232, 115);
+        color: #000000;
+        text-align: center;
+        border-style: solid; color:darkgoldenrod;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+}
+.angelis:hover .angelisinfo {
+    visibility: visible;
+}
+
+.demilis {
+position: relative;
+display: inline-block;
+}
+.demilis .demilisinfo {
+    visibility: hidden;
+        width: 300px;
+        background-color: rgb(204, 0, 0);
+        color: #000000;
+
+        text-align: center;
+        border-style: solid; color:rgb(51, 1, 1);
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+}
+.demilis:hover .demilisinfo {
+    visibility: visible;
+}
+
+.iluminis {
+    position: relative;
+    display: inline-block;
+    }
+
+.iluminisinfo {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(184, 0, 181);
+    color: #400044;
+    text-align: center;
+    border-style: solid; color:rgb(76, 0, 86);
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.iluminis:hover .iluminisinfo {
+    visibility: visible;
+}
+    
+
+.bro{
+    position: relative;
+    display: inline-block;
+}
+
+.broinfo{
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    text-align: center;
+    border-style: solid; color:rgb(255, 255, 255);
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+.bro:hover .broinfo {
+    visibility: visible;
+}
+
+.lo {
+    position: relative;
+    display: inline-block;
+}
+
+.loinfo {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(255, 173, 220);
+    color: #ffffff;
+    text-align: center;
+    border-style: solid; color:rgb(255, 43, 163);
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+.lo:hover .loinfo {
+    visibility: visible;
+}
+
+.lu {
+    position: relative;
+    display: inline-block;
+}
+
+.luinfo {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(255, 11, 149);
+    color: #ffffff;
+    text-align: center;
+    border-style: solid; color:rgb(157, 0, 84);
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.lu:hover .luinfo {
+    visibility: visible;
+}
+
+.wis {
+    position: relative;
+    display: inline-block;
+}
+.wisinfo {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(216, 0, 0);
+    text-align: center;
+    border-style: solid; color:rgb(255, 223, 11);
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.wis:hover .wisinfo {
+    visibility: visible;
+}
+
+.royal {
+    position: relative;
+    display: inline-block;
+}
+.royalinfo {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(255, 225, 125);
+    color: #ffffff;
+    text-align: center;
+    border-style: solid; color:rgb(157, 126, 0);
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+.royal:hover .royalinfo{
+    visibility: visible;
+}
+
+.angeex {
+    position: relative;
+    display: inline-block; 
+}
+
+.angeexinfo {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(255, 232, 115);
+    color: #000000;
+    text-align: center;
+    border-style: solid; color:darkgoldenrod;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;  
+}
+
+.angeex:hover .angeexinfo {
+    visibility: visible;
+}
+
+.bru {
+    position: relative;
+    display: inline-block;   
+}
+.bruinfo {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(0, 0, 0);
+    color: #000000;
+    text-align: center;
+    border-style: solid; color:rgb(146, 0, 179);
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1; 
+}
+.bru:hover .bruinfo {
+    visibility: visible;
+}
+
+.mor {
+    position: relative;
+    display: inline-block; 
+}
+.morinfo {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(63, 1, 56);
+    color: #000000;
+    text-align: center;
+    border-style: solid; color:rgb(255, 255, 255);
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.mor:hover .morinfo {
+    visibility: visible;
+}
+
+.demiex {
+    position: relative;
+    display: inline-block;
+}
+
+.demiexinfo {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(204, 0, 0);
+    color: #000000;
+    text-align: center;
+    border-style: solid; color:rgb(51, 1, 1);
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.demiex:hover .demiexinfo {
+    visibility: visible;
+}
+
+.ds {
+    position: relative;
+    display: inline-block;
+}
+
+.dsinfo{
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(195, 0, 0);
+    color: #000000;
+    text-align: center;
+    border-style: solid; color:rgb(0, 0, 0);
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.ds:hover .dsinfo {
+    visibility: visible;
+}
+
+.mag {
+    position: relative;
+    display: inline-block;
+}
+
+.maginfo {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(193, 0, 246);
+    color: #000000;
+    text-align: center;
+    border-style: solid; color:rgb(255, 225, 76);
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.mag:hover .maginfo {
+visibility: visible;
+}
+
+.morta {
+    position: relative;
+    display: inline-block;
+}
+
+.mortainfo {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(38, 165, 74);
+    color: #000000;
+    text-align: center;
+    border-style: solid; color:rgb(33, 90, 16);
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.morta:hover .mortainfo {
+    visibility: visible;
+}
+ 
+.mortaex {
+    position: relative;
+    display: inline-block;
+}
+
+.mortaexinfo {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(182, 122, 138);
+    color: #000000;
+    text-align: center;
+    border-style: solid; color:rgb(61, 28, 29);
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.mortaex:hover .mortaexinfo {
+visibility: visible;
+}
+
+.readia {
+    position: relative;
+    display: inline-block;
+}
+
+.readiainfo {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(110, 0, 0);
+    color: #000000;
+    text-align: center;
+    border-style: solid; color:rgb(236, 202, 9);
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.readia:hover .readiainfo {
+    visibility: visible;
+}
+
+.readeu {
+    position: relative;
+    display: inline-block;
+}
+
+.readeuinfo {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(109, 146, 255);
+    color: #000000;
+    text-align: center;
+    border-style: solid; color:rgb(236, 202, 9);
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.readeu:hover .readeuinfo {
+    visibility: visible;
+}
+
+.se {
+    position: relative;
+    display: inline-block;
+}
+.seinfo {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(0, 57, 228);
+    color: #000000;
+    text-align: center;
+    border-style: solid; color:rgb(5, 0, 73);
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+} 
+.se:hover .seinfo {
+visibility: visible;
+}
+#nome {
+    font-size: 60;   
+}
+

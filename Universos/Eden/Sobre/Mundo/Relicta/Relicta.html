@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Relicta</title>
+    <style>
+           .snowflake {
+        position: absolute;
+        color: purple; /* Mudança de cor para roxo */
+        font-size: 2em;
+        pointer-events: none;}
+    </style>
+    
+</head>
+<body>
+    <script id="prililim">
+        // Number of snowflakes
+    var snowflakes = 50;
+
+// Create snowflakes
+for (var i = 0; i < snowflakes; i++) {
+    var snowflake = document.createElement("div");
+    snowflake.className = "snowflake";
+    snowflake.innerHTML = "✧";
+    document.body.appendChild(snowflake);
+    placeSnowflake(snowflake);
+}
+
+// Function to randomly place snowflake
+function placeSnowflake(snowflake) {
+    var size = Math.random() * 1.5 + 0.5; // Random size between 0.5 and 2
+    var x = Math.random() * window.innerWidth; // Random horizontal position
+    var y = -10; // Start above the viewport
+    var speed = Math.random() * 2 + 0.5; // Random speed between 0.5 and 2
+
+    snowflake.style.fontSize = size + "em";
+    snowflake.style.left = x + "px";
+    snowflake.style.top = y + "px";
+
+    // Update snowflake position
+    function update() {
+        y += speed;
+        snowflake.style.top = y + "px";
+
+        // Reset snowflake position if it goes above the viewport
+        if (y > window.innerHeight) {
+            y = -10;
+            x = Math.random() * window.innerWidth;
+            snowflake.style.left = x + "px";
+        }
+
+        // Animate continuously
+        requestAnimationFrame(update);
+    }
+
+    update(); // Start animation
+}
+    </script>
+        <header>
+            <header>
+                <img src="Eden logo.png" alt="">
+                <nav>
+            <a href="Sobre/Sobre.html">✦ Sobre</a>
+            <a href="Comics/Comics.html">✦ Comics</a>
+            <a href="Jogos/Jogos.html">✦ Jogos</a> 
+            <a href="Mundo/Mundo.html">✦ Mundo</a>
+            <a href="Personagens/Personagens">✦ Personagens</a>
+            <a href="Galeria/Galeria.html">✦ Galeria</a>
+            </nav>
+        </header>
+        <main>
+            <section>
+              <article>
+                  <h1><img src="Amaldrictext.png" alt=""></h1>
+              </article>
+              <article>
+                          <p>✦. 
+                        </p>
+                  <div class="category">
+                      <h3>♜ Arquitetura e Estética</h3>
+                      <div class="category-content">
+                          <p>.
+                          </p>
+                      </div>
+                  </div>
+                  <div class="category">
+                      <h3>⯍ População</h3>
+                      <div class="category-content">
+                          <p>.</p>
+                      </div>
+                  </div>
+                  <div class="category">
+                      <h3>🏠︎ Locais</h3>
+                      <div class="category-content">
+                          <p>.</p>
+                      </div>
+                  </div>
+            
+                  </div>
+                  <div class="category">
+                      <h3>🕮 Habitantes</h3>
+                      <div class="category-content">
+                          <p>.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="category">
+                  <h3>⚑ Bandeira</h3>
+                  <div class="category-content">
+                      <img src="#" alt="" srcset="">
+                  </div>
+              </div>
+              </div>
+              <script>
+            const categories = document.querySelectorAll('.category');
+            categories.forEach(category => {
+              const title = category.querySelector('h3');
+              const content = category.querySelector('.category-content');
+            
+              title.addEventListener('click', () => {
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                categories.forEach(c => {
+                    c.querySelector('.category-content').style.display = 'none';
+                });
+                content.style.display = 'block';
+            }
+              });
+            });
+              </script>
+              <script id="prililim">
+        var sparkles = 15;
+        // Create sparkles
+        for (var i = 0; i < sparkles; i++) {
+            var sparkle = document.createElement("div");
+            sparkle.className = "sparkle"; // Mudança de classe para 'sparkle'
+            sparkle.innerHTML = "✧"; // Mudança do símbolo para um asterisco
+            document.body.appendChild(sparkle);
+            placeSparkle(sparkle);
+        }
+    
+        // Function to randomly place sparkle
+        function placeSparkle(sparkle) {
+            var size = Math.random() * 1.5 + 0.5; // Random size between 0.5 and 2
+            var x = Math.random() * window.innerWidth; // Random horizontal position
+            var y = -10; // Start above the viewport
+            var speed = Math.random() * 2 + 0.5; // Random speed between 0.5 and 2
+    
+            sparkle.style.fontSize = size + "em";
+            sparkle.style.left = x + "px";
+            sparkle.style.top = y + "px";
+    
+            // Update sparkle position
+            function update() {
+                y += speed;
+                sparkle.style.top = y + "px";
+    
+                // Reset sparkle position if it goes above the viewport
+                if (y > window.innerHeight) {
+                    y = -10;
+                    x = Math.random() * window.innerWidth;
+                    sparkle.style.left = x + "px";
+                }
+    
+                // Animate continuously
+                requestAnimationFrame(update);
+            }
+    
+            update(); // Start animation
+        }
+    </script>
+              </article>
+              <p>Copyright © 2024 1nfinite8ooks. All rights reserved.</p>
+        </main>
+</body>
+</html>
