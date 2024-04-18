@@ -15,6 +15,7 @@ main > a {
 }
 nav > a {
   text-decoration: none;
+  align-items: center;
   color: white;
   font-weight: bold;
   padding: 5px;
