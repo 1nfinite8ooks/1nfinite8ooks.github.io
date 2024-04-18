@@ -20,7 +20,11 @@ nav > a {
     padding: 5px;
     margin-right: 20px;
 }
-
+@media screen and (max-width: 300px) {
+  nav > a {
+    margin-right: 1px; /* Altera o margin para 1px em telas pequenas */
+  }
+}
 main {
     align-items: center;
     background-color: white;
