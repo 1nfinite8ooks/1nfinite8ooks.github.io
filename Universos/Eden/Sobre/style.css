@@ -29,7 +29,7 @@ nav {
 }
 nav > a {
   margin-right: 10px; /* Reduz o espaço entre os links */
-  font-size: 12px; /* Ajusta o tamanho da fonte para torná-la mais legível */
+  font-size: 20px; /* Ajusta o tamanho da fonte para torná-la mais legível */
 }
 }
 main {
