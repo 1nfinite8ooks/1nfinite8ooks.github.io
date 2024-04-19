@@ -12,11 +12,11 @@
             <img src="Eden logo.png" alt="">
             <nav>
         <a href="#">✦ Sobre</a>
-        <a href="./Sobre/Comics">✦ Comics</a>
-        <a href="./Sobre/Jogos">✦ Jogos</a> 
-        <a href="./Sobre/Mundo">✦ Mundo</a>
-        <a href="./Sobre/Personagens">✦ Personagens</a>
-        <a href="./Sobre/Galeria">✦ Galeria</a>
+        <a href="../Sobre/Comics/Comics.html">✦ Comics</a>
+        <a href="../Sobre/Jogos/Jogos.html">✦ Jogos</a> 
+        <a href="../Sobre/Mundo/Mundo.html">✦ Mundo</a>
+        <a href="../Sobre/Personagens/Personagens.html">✦ Personagens</a>
+        <a href="../Sobre/Galeria/Galeria.html">✦ Galeria</a>
         </nav>
     </header>
     <main>
@@ -64,4 +64,14 @@
       <p>Copyright © 2024 1nfinite8ooks. All rights reserved.</p>
     </main>
 </body>
+<script id="esconder">
+    // Verifica se a página foi carregada completamente
+    document.addEventListener("DOMContentLoaded", function() {
+        // Remove a extensão ".html" da URL se existir
+        if (window.location.pathname.endsWith('.html')) {
+            var newPath = window.location.pathname.replace('.html', '');
+            history.replaceState({}, document.title, newPath);
+        }
+    });
+</script>
 </html>
