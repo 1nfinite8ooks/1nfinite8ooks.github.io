@@ -9,20 +9,8 @@ font-family: 'Times New Roman', Times, serif;
 padding: 10px;
 margin: auto;
 }
-main > a {
-    background-color: black;
 
-}
-nav > a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 5px;
-    margin-right: 20px;
-}
-nav:hover > a {
-text-decoration: underline;
-}
+
 main {
     align-items: center;
 
@@ -49,52 +37,7 @@ main {
       box-sizing: border-box; /* Certifique-se de que o preenchimento não aumenta a largura total */
     }
   }
-  .catalog {
-    margin: 20px auto;
-    width: 80%;
-    max-width: 600px;
-}
-.category {
-    margin-bottom: 10px;
-}
-.category h3 {
-    cursor: pointer;
-    margin: 0;
-    padding: 10px;
-    background-color: black;
-    color: white;
-    border-radius: 10px;
-    text-align: center; /* Centraliza o texto horizontalmente */
-}
-.category-content {
-    display: none; /* Inicialmente oculto */
-    padding: 10px;
-    margin: auto;
-    border: 1px solid #ccc;
-    border-top: none;
-}
-.category-content p {
-margin: 0;
-padding: 5px;
-background-color: #f0f0f0;
-white-space: nowrap; /* Impede que os links quebrem para a próxima linha */
-overflow-x: auto; /* Adiciona uma barra de rolagem horizontal se os links forem muito largos */
-}
 
-.category-content p a {
-display: inline-block; /* Permite que os links se comportem como blocos inline */
-margin-right: 5px; /* Adiciona um espaço entre os links */
-margin-bottom: 5px; /* Adiciona um espaço abaixo dos links */
-background-color: black;
-color: white;
-padding: 5px;
-border-radius: 5px;
-text-decoration: none; /* Remove o sublinhado padrão */
-}
-/* Centralizar conteúdo */
-.category-content {
-    padding-left: 20px; /* Adiciona um recuo para manter o conteúdo alinhado à esquerda */
-}
   footer {
     background-color: white;
     text-align: center;
@@ -111,13 +54,4 @@ text-decoration: none; /* Remove o sublinhado padrão */
     footer {
         padding: 10px; /* Adiciona algum espaço interno */
     }
-}
-#butao {
-    cursor: pointer;
-    margin: 0;
-    padding: 10px;
-    background-color: black;
-    color: white;
-    border-radius: 10px;
-    text-align: center;
 }
