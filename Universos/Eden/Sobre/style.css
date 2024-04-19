@@ -3,16 +3,17 @@ body {
     background-color: black;
     font-size: 20px;
 }
-header{
-background-color: black;
-font-family: 'Times New Roman', Times, serif; 
-padding: 10px;
-margin: center;
+header {
+  background-color: black;
+  font-family: 'Times New Roman', Times, serif; 
+  padding: 10px;
+  margin: auto;
 }
-main > a {
-    background-color: black;
 
+main > a {
+  background-color: black;
 }
+
 nav > a {
   text-decoration: none;
   color: white;
@@ -21,7 +22,6 @@ nav > a {
   margin-right: 20px;
   display: inline-flex; /* Altera o comportamento padrão para que os links fiquem em linha */
 }
-
 @media screen and (max-width: 600px) {
   nav {
     text-align: center; /* Centraliza os elementos dentro de <nav> */
@@ -38,23 +38,28 @@ nav > a {
     vertical-align: middle; /* Alinha verticalmente os elementos */
   }
 }
+
+/* Estilos para telas pequenas (menos de 500px de largura) */
 @media screen and (max-width: 500px) {
-    main {
-      width: 450px;
-      margin: center; /* Para centralizar o conteúdo */
-    }
+  main {
+    width: 90%; /* Define a largura do conteúdo principal */
+    margin: 0 auto; /* Para centralizar o conteúdo */
   }
-  main img {
-    max-width: 100%;
-    height: auto; }
-  /* Estilos para telas médias (entre 450px e 1200px) */
-  @media screen and (min-width: 451px) and (max-width: 1199px) {
-    main {
-      width: 100%; /* Use a largura total da tela */
-      padding: 0 20px; /* Adicione algum espaço de preenchimento nas laterais */
-      box-sizing: border-box; /* Certifique-se de que o preenchimento não aumenta a largura total */
-    }
+}
+
+/* Estilos para telas médias (entre 450px e 1200px) */
+@media screen and (min-width: 451px) and (max-width: 1199px) {
+  main {
+    width: 100%; /* Use a largura total da tela */
+    padding: 0 20px; /* Adicione algum espaço de preenchimento nas laterais */
+    box-sizing: border-box; /* Certifique-se de que o preenchimento não aumenta a largura total */
   }
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+}
   .catalog {
     margin: 20px auto;
     width: 80%;
