@@ -27,7 +27,7 @@ nav > a {
 
 nav > a {
   margin-right: 10px; /* Reduz o espaço entre os links */
-  font-size: 20px; /* Ajusta o tamanho da fonte para torná-la mais legível */
+  font-size: 30px; /* Ajusta o tamanho da fonte para torná-la mais legível */
   display: inline-block;
   justify-content: center;
 }
