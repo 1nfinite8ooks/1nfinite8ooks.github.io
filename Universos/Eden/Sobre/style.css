@@ -1,26 +1,18 @@
 body {
-  text-align: center; /* Centraliza o conteúdo dentro do body */
-  background-color: black;
-  font-size: 20px;
-  margin: 0; /* Remove a margem padrão */
+    text-align: center;
+    background-color: black;
+    font-size: 20px;
 }
-
-header {
-  background-color: black;
-  font-family: 'Times New Roman', Times, serif; 
-  padding: 10px;
-  margin: auto;
+header{
+background-color: black;
+font-family: 'Times New Roman', Times, serif; 
+padding: 10px;
+margin: auto;
 }
+main > a {
+    background-color: black;
 
-main {
-  align-items: center;
-  background-color: white; /* Define o fundo branco para o main */
-  width: 1200px;
-  padding: 10px;
-  margin: auto; /* Centraliza o main horizontalmente */
-  border-radius: 20px;
 }
-
 nav > a {
   text-decoration: none;
   color: white;
@@ -30,44 +22,42 @@ nav > a {
   display: inline-flex; /* Altera o comportamento padrão para que os links fiquem em linha */
 }
 
+/* Estilos para telas pequenas usando media query */
 @media screen and (max-width: 600px) {
-  nav {
-    text-align: center; /* Centraliza os elementos dentro de <nav> */
-    max-width: 100%; /* Adiciona uma largura máxima para <nav> */
-    overflow-x: auto; /* Adiciona uma barra de rolagem horizontal se os elementos dentro de <nav> forem muito largos */
-  }
-
-  nav > a {
-    margin-right: 10px; /* Reduz a margem entre os links */
-    font-size: 16px; /* Ajusta o tamanho da fonte */
-    display: inline-block; /* Certifique-se de que os links fiquem em linha */
-    white-space: nowrap; /* Impede que os links quebrem para a próxima linha */
-    line-height: normal; /* Define a altura da linha para o padrão */
-    vertical-align: middle; /* Alinha verticalmente os elementos */
-  }
+nav {
+  text-align: center;
 }
-
-/* Estilos para telas pequenas (menos de 500px de largura) */
+nav > a {
+  margin-right: 80px; /* Reduz o espaço entre os links */
+  font-size: 20px; /* Ajusta o tamanho da fonte para torná-la mais legível */
+  display: flex;
+}
+}
+main {
+    align-items: center;
+    background-color: white;
+    width: 1200px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 20px;
+}
 @media screen and (max-width: 500px) {
-  main {
-    width: 90%; /* Define a largura do conteúdo principal */
-    margin: 0 auto; /* Para centralizar o conteúdo */
+    main {
+      width: 450px;
+      margin: 0 auto; /* Para centralizar o conteúdo */
+    }
   }
-}
-
-/* Estilos para telas médias (entre 450px e 1200px) */
-@media screen and (min-width: 451px) and (max-width: 1199px) {
-  main {
-    width: 100%; /* Use a largura total da tela */
-    padding: 0 20px; /* Adicione algum espaço de preenchimento nas laterais */
-    box-sizing: border-box; /* Certifique-se de que o preenchimento não aumenta a largura total */
+  main img {
+    max-width: 100%;
+    height: auto; }
+  /* Estilos para telas médias (entre 450px e 1200px) */
+  @media screen and (min-width: 451px) and (max-width: 1199px) {
+    main {
+      width: 100%; /* Use a largura total da tela */
+      padding: 0 20px; /* Adicione algum espaço de preenchimento nas laterais */
+      box-sizing: border-box; /* Certifique-se de que o preenchimento não aumenta a largura total */
+    }
   }
-}
-
-main img {
-  max-width: 100%;
-  height: auto;
-}
   .catalog {
     margin: 20px auto;
     width: 80%;
