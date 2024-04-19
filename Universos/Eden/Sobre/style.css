@@ -33,6 +33,7 @@ nav > a {
     margin-right: 10px; /* Reduz a margem entre os links */
     font-size: 16px; /* Ajusta o tamanho da fonte */
     display: inline-block; /* Certifique-se de que os links fiquem em linha */
+    white-space: nowrap; /* Impede que os links quebrem para a próxima linha */
   }
 }
 main {
