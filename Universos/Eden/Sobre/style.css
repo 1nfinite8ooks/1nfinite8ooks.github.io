@@ -34,15 +34,9 @@ nav > a {
     font-size: 16px; /* Ajusta o tamanho da fonte */
     display: inline-block; /* Certifique-se de que os links fiquem em linha */
     white-space: nowrap; /* Impede que os links quebrem para a próxima linha */
+    line-height: normal; /* Define a altura da linha para o padrão */
+    vertical-align: middle; /* Alinha verticalmente os elementos */
   }
-}
-main {
-    align-items: center;
-    background-color: white;
-    width: 1200px;
-    padding: 10px;
-    margin: auto;
-    border-radius: 20px;
 }
 @media screen and (max-width: 500px) {
     main {
