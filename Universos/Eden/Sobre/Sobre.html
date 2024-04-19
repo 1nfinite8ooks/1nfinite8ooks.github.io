@@ -64,14 +64,4 @@
       <p>Copyright © 2024 1nfinite8ooks. All rights reserved.</p>
     </main>
 </body>
-<script id="esconder">
-    // Verifica se a página foi carregada completamente
-    document.addEventListener("DOMContentLoaded", function() {
-        // Remove a extensão ".html" da URL se existir
-        if (window.location.pathname.endsWith('.html')) {
-            var newPath = window.location.pathname.replace('.html', '');
-            history.replaceState({}, document.title, newPath);
-        }
-    });
-</script>
 </html>

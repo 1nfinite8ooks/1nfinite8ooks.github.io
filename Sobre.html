@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eden</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <header>
+            <img src="Eden logo.png" alt="">
+            <nav>
+        <a href="#">✦ Sobre</a>
+        <a href="../Sobre/Comics/Comics.html">✦ Comics</a>
+        <a href="../Sobre/Jogos/Jogos.html">✦ Jogos</a> 
+        <a href="../Sobre/Mundo/Mundo.html">✦ Mundo</a>
+        <a href="../Sobre/Personagens/Personagens.html">✦ Personagens</a>
+        <a href="../Sobre/Galeria/Galeria.html">✦ Galeria</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Bem vindo ao</h1>
+        <img src="NewCanvas1.png" alt="">
+        <p>Parece que temos um novo visitante não é?
+        <br> Fique à vontade para explorar nosso incrivel mundo cheio de possibilidades, <br> lugares, aventuras, mistérios... E muito mais!  </p>
+        <p>Logo abaixo temos nosso catálogo que vai te guiar a explorar esse mundo, <br> não esqueça de ver cada parte... Cada detalhe, tudo tem seu valor e informação! <br>
+        sempre fique atento, passe o mouse, clique, e interaja com nosso mundo!</p>
+        <p><ins>É recomendado usar a <strong>versão de computador</strong> caso esteja em outro dispositivo! ⮯ </ins></p>
+        <div class="catalog">
+            <div class="category">
+                <h3>✎Sobre</h3>
+                <div class="category-content">
+                    <p>
+                        <a href="Mundo/Mundo.html" target="_blank" id="link">Mundo</a>
+                        <a href="Personagens/Personagens.html" target="_blank" id="link">Personagens</a>
+                        <a href="Jogos/Jogos.html" target="_blank" id="link">Jogos</a>
+                        <br>
+                        <a href="Comics/Comics.html" target="blank" id="link">Comics</a>
+                        <a href="Galeria/Galeria.html" id="link" target="_blank">Galeria</a>
+                    
+                    </p>
+
+                </div>
+            </div>
+     <script>
+          const categories = document.querySelectorAll('.category');
+        categories.forEach(category => {
+            const title = category.querySelector('h3');
+            const content = category.querySelector('.category-content');
+    
+            title.addEventListener('click', () => {
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    categories.forEach(c => {
+                        c.querySelector('.category-content').style.display = 'none';
+                    });
+                    content.style.display = 'block';
+                }
+            });
+        });
+     </script>     
+      <p>Copyright © 2024 1nfinite8ooks. All rights reserved.</p>
+    </main>
+</body>
+</html>
