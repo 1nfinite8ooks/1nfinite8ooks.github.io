@@ -12,9 +12,6 @@ header {
 main {
   background-color: white;
 }
-main > a {
-  background-color: black;
-}
 
 nav > a {
   text-decoration: none;
