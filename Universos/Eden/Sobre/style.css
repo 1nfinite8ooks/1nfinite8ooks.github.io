@@ -2,6 +2,7 @@ body {
   text-align: center; /* Centraliza o conteúdo dentro do body */
   background-color: black;
   font-size: 20px;
+  margin: 0; /* Remove a margem padrão */
 }
 
 header {
@@ -13,7 +14,7 @@ header {
 
 main {
   align-items: center;
-  background-color: white;
+  background-color: white; /* Define o fundo branco para o main */
   width: 1200px;
   padding: 10px;
   margin: auto; /* Centraliza o main horizontalmente */
