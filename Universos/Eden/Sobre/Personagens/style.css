@@ -21,7 +21,9 @@ padding: 5px;
 margin-right: 20px;
 display: inline-flex; /* Altera o comportamento padrão para que os links fiquem em linha */
 }
-
+h2 {
+  color: red;
+}
 /* Estilos para telas pequenas usando media query */
 @media screen and (max-width: 600px) {
 nav {
