@@ -27,9 +27,9 @@ nav > a {
 
 nav > a {
   margin-right: 20px; /* Reduz o espaço entre os links */
-  font-size: 50px; /* Ajusta o tamanho da fonte para torná-la mais legível */
+  font-size: 30px; /* Ajusta o tamanho da fonte para torná-la mais legível */
   display: inline-flex;
-  justify-content: initial;
+  justify-content: flex-start;
 }
 }
 main {
