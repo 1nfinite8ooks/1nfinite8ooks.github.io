@@ -37,7 +37,7 @@ main {
       box-sizing: border-box; /* Certifique-se de que o preenchimento não aumenta a largura total */
     }
   }
-  a {
+  #butao {
     background-color: black;
     text-decoration: none;
     color: white;
