@@ -1,0 +1,305 @@
+body {
+  text-align: center;
+  background-color: black;
+  font-size: 20px;
+  justify-content: center;
+  transition: opacity 0.4s 0.2s;
+}
+
+header{
+background-color: black;
+font-family: 'Times New Roman', Times, serif; 
+padding: 10px;
+margin: auto;
+}
+main > a {
+  background-color: black;
+
+}
+nav > a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  margin-right: 20px;
+}
+.book {
+  width: 350px; /* aumenta a largura do livro para 350px */
+  height: 450px; /* aumenta a altura do livro para 450px */
+  perspective: 900px; /* mantém o ajuste de perspectiva */
+
+}
+
+.pages {
+  width: 700px; /* largura total das páginas (2 páginas por vez) */
+  height: 450px; /* altura das páginas */
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.page {
+  width: 350px; /* largura de cada página */
+  height: 450px; /* altura de cada página */
+  position: absolute;
+  top: 0;
+  transform-origin: 0 0;
+  transition: transform 1.4s;
+  backface-visibility: hidden;
+  cursor: pointer;
+  user-select: none;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+.page:nth-child(even) {
+  pointer-events: none;
+  transform: rotateY(180deg);
+  transform-origin: 100% 0;
+  left: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+.page:nth-child(odd) {
+  pointer-events: all;
+  transform: rotateY(0deg);
+  right: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.page:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2; /* removido o transition e o background */
+}
+
+.page:nth-child(odd):hover {
+  transform: rotateY(-15deg);
+}
+
+.page:nth-child(even):before {
+  background: none; /* removida a sombra do lado direito */
+}
+
+.page.grabbing {
+  transition: none;
+}
+
+.page.flipped:nth-child(odd) {
+  pointer-events: none;
+  transform: rotateY(-180deg);
+}
+
+.page.flipped:nth-child(even) {
+  pointer-events: all;
+  transform: rotateY(0deg);
+}
+main {
+  align-items: center;
+  background-color: white;
+  width: 1200px;
+  padding: 10px;
+  margin: auto;
+  border-radius: 20px;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  main {
+    width: 450px;
+    margin: 0 auto; /* Para centralizar o conteúdo */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* esconde o conteúdo que ultrapassar os limites do main */
+  }
+}
+main img {
+  max-width: 100%;
+  height: auto; }
+/* Estilos para telas médias (entre 450px e 1200px) */
+@media screen and (min-width: 451px) and (max-width: 1199px) {
+  main {
+    width: 100%; /* Use a largura total da tela */
+    padding: 0 20px; /* Adicione algum espaço de preenchimento nas laterais */
+    box-sizing: border-box; /* Certifique-se de que o preenchimento não aumenta a largura total */
+  }
+}
+@media screen and (max-width: 600px) {
+  .book {
+    width: 280px; /* reduz a largura do livro */
+    height: 360px; /* reduz a altura do livro */
+  }
+
+  .pages {
+    width: 560px; /* reduz a largura total das páginas */
+    height: 360px; /* mantém a altura das páginas */
+  }
+
+  .page {
+    width: 280px; /* reduz a largura de cada página */
+    height: 360px; /* mantém a altura de cada página */
+  }
+}
+.catalog {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+}
+.category {
+  margin-bottom: 10px;
+}
+.category h3 {
+  cursor: pointer;
+  margin: 0;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  text-align: center; /* Centraliza o texto horizontalmente */
+}
+.category-content {
+  display: none; /* Inicialmente oculto */
+  padding: 10px;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.category-content p {
+margin: 0;
+padding: 5px;
+background-color: #f0f0f0;
+white-space: nowrap; /* Impede que os links quebrem para a próxima linha */
+overflow-x: auto; /* Adiciona uma barra de rolagem horizontal se os links forem muito largos */
+}
+
+.category-content p a {
+display: inline-block; /* Permite que os links se comportem como blocos inline */
+margin-right: 5px; /* Adiciona um espaço entre os links */
+margin-bottom: 5px; /* Adiciona um espaço abaixo dos links */
+background-color: black;
+color: white;
+padding: 5px;
+border-radius: 5px;
+text-decoration: none; /* Remove o sublinhado padrão */
+}
+/* Centralizar conteúdo */
+.category-content {
+  padding-left: 20px; /* Adiciona um recuo para manter o conteúdo alinhado à esquerda */
+}
+
+a {
+background-color: black;
+text-decoration: none;
+color: white;
+padding: 10px;
+border-radius: 10px;
+text-align: center;
+}
+
+
+@media screen and (min-width: 550px) and (max-width: 550px) {
+.window {
+  width: 400px;
+  background-color: #f8f8f8; /* Cor de fundo do estilo Windows XP */
+  border: 1px solid #c0c0c0; /* Cor da borda do estilo Windows XP */
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ 
+}
+}
+.title-bar {
+  background-color: #842547; /* Cor de fundo da barra de título do estilo Windows XP */
+  color: white;
+  padding: 10px;
+    background-image: linear-gradient(to bottom right, rgba(255,0,0,0), rgb(204, 86, 125));
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons {
+  display: flex;
+}
+
+.buttons div {
+  width: 20px;
+  height: 20px;
+ 
+  margin-right: 5px;
+}
+
+.close-button {
+  background-color: #840390; /* Cor do botão de fechar do estilo Windows XP */
+  border: outset;
+}
+
+.minimize-button {
+  background-color: #a80a5c; /* Cor do botão de minimizar do estilo Windows XP */
+  border: outset;
+}
+
+.content {
+  padding: 20px;
+  max-height: 300px; /* Altura máxima do conteúdo */
+  overflow-y: auto;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #e4e4e4; /* Cor de fundo da barra de pesquisa */
+  border: 1px solid #c0c0c0; /* Cor da borda da barra de pesquisa */
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+input[type="text"] {
+  width: calc(100% - 40px);
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  background-color: #e4e4e4; /* Cor de fundo do campo de pesquisa */
+  outline: none;
+}
+
+.search-icon {
+  width: 40px;
+  height: 100%;
+  background-image: url('search-icon.png');
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+button {
+  display: none; /* Escondendo o botão de pesquisa */
+}
+
+#resultado {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Estilos adicionais para imitar o visual do Google antigo no Windows XP */
+h2 {
+  font-size: 18px;
+  color: #1a0dab; /* Cor do título do Google */
+  margin-bottom: 10px;
+}
+
+p #site {
+  color: #545454; /* Cor do texto do Google */
+}

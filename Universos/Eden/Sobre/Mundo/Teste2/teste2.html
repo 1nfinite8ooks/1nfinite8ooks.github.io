@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eden</title>
+    <link rel="stylesheet" href="teste.css">
+</head>
+<body>
+    <header>
+        <header>
+            <img src="Eden logo.png" alt="">
+            <nav>
+        <a href="#">✦ Sobre</a>
+        <a href="../Sobre/Comics/Comics.html">✦ Comics</a>
+        <a href="../Sobre/Jogos/Jogos.html">✦ Jogos</a> 
+        <a href="../Sobre/Mundo/Mundo.html">✦ Mundo</a>
+        <a href="../Sobre/Personagens/Personagens.html">✦ Personagens</a>
+        <a href="../Sobre/Galeria/Galeria.html">✦ Galeria</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Bem vindo</h1>
+        <div class="book">
+            <div id="pages" class="pages">
+              <div class="page" style="background-image: url('https://papermine.com/pub/autoship-wellness-june20202/media/32191221.png')"></div>
+              <div class="page" style="background-image: url('https://papermine.com/pub/autoship-wellness-june20202/media/32191283.png')"></div>
+              <div class="page" style="background-image: url('https://papermine.com/pub/autoship-wellness-june20202/media/32191250.png')"></div>
+              <div class="page" style="background-image: url('https://papermine.com/pub/autoship-wellness-june20202/media/32191400.png')"></div>
+              <div class="page" style="background-image: url('https://papermine.com/pub/autoship-wellness-june20202/media/32191336.png')"></div>
+              <div class="page" style="background-image: url('https://papermine.com/pub/autoship-wellness-june20202/media/32191370.png')"></div>
+            </div>
+          </div>
+          <script>
+   var pages = document.getElementsByClassName('page');
+  for(var i = 0; i < pages.length; i++) {
+    var page = pages[i];
+    if (i % 2 === 0) {
+      page.style.zIndex = (pages.length - i);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    for(var i = 0; i < pages.length; i++) {
+      pages[i].pageNum = i + 1;
+      pages[i].onclick=function() {
+        if (this.pageNum % 2 === 0) {
+          this.classList.remove('flipped');
+          this.previousElementSibling.classList.remove('flipped');
+        } else {
+          this.classList.add('flipped');
+          this.nextElementSibling.classList.add('flipped');
+        }
+      }
+    }
+  })
+       </script>
+      <p>Copyright © 2024 1nfinite8ooks. All rights reserved.</p>
+    </main>
+</body>
+</html>
