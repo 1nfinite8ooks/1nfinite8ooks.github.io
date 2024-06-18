@@ -39,21 +39,21 @@
             <p><img src="Seearch.png" alt="" srcset="">
             </p>
                 <div class="search-container">
-                    <input type="text" id="search-input" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" placeholder="Digite aqui...">
+                    <input type="text" id="text" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" placeholder="Digite aqui...">
                     <div class="search-icon" onclick="pesquisar()"></div>
                 </div>
                 <div id="resultado"></div>
             </div>
         </div>
      <script>
-        document.getElementById('search-input').addEventListener('keypress', function (e) {
+        document.getElementById('text').addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
         pesquisar();
     }
 });
 
 function pesquisar() {
-    var input = document.getElementById('search-input').value.toString();
+    var input = document.getElementById('text').value.toString();
     var resultado = document.getElementById('resultado');
     if (input === 'dipueb.com') {
             window.open('Dipueb.html', '_self');
