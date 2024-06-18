@@ -21,39 +21,47 @@
     </header>
     <main>
         <h1>Bem vindo</h1>
-        <div class="book">
-            <div id="pages" class="pages">
-              <div class="page" style="background-image: url('https://papermine.com/pub/autoship-wellness-june20202/media/32191221.png')"></div>
-              <div class="page" style="background-image: url('https://papermine.com/pub/autoship-wellness-june20202/media/32191283.png')"></div>
-              <div class="page" style="background-image: url('https://papermine.com/pub/autoship-wellness-june20202/media/32191250.png')"></div>
-              <div class="page" style="background-image: url('https://papermine.com/pub/autoship-wellness-june20202/media/32191400.png')"></div>
-              <div class="page" style="background-image: url('https://papermine.com/pub/autoship-wellness-june20202/media/32191336.png')"></div>
-              <div class="page" style="background-image: url('https://papermine.com/pub/autoship-wellness-june20202/media/32191370.png')"></div>
+          <article>
+            <div class="conteudo-grande">
+              <div class="book">
+                  <div id="pages" class="pages">
+                    <div class="page" style="background-image: url('Capa.png')"></div>
+                    <div class="page" style="background-image: url('1.png')"></div>
+                    <div class="page" style="background-image: url('2.png')"></div>
+                    <div class="page" style="background-image: url('3.png')"></div>
+                    <div class="page" style="background-image: url('4.png')"></div>
+                    <div class="page" style="background-image: url('Contra\ capa.png')"></div>
+                  </div>
+                </div>
             </div>
-          </div>
+          </article>
           <script>
-   var pages = document.getElementsByClassName('page');
-  for(var i = 0; i < pages.length; i++) {
-    var page = pages[i];
-    if (i % 2 === 0) {
-      page.style.zIndex = (pages.length - i);
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', function(){
-    for(var i = 0; i < pages.length; i++) {
-      pages[i].pageNum = i + 1;
-      pages[i].onclick=function() {
-        if (this.pageNum % 2 === 0) {
-          this.classList.remove('flipped');
-          this.previousElementSibling.classList.remove('flipped');
-        } else {
-          this.classList.add('flipped');
-          this.nextElementSibling.classList.add('flipped');
-        }
+  var pages = document.getElementsByClassName('page');
+    for (var i = 0; i < pages.length; i++) {
+      var page = pages[i];
+      if (i % 2 === 0) {
+        page.style.zIndex = (pages.length - i);
       }
     }
-  })
+
+    document.addEventListener('DOMContentLoaded', function(){
+      var audio = new Audio('page-flip-01a.mp3');  // substitua pelo caminho do seu arquivo MP3
+
+      for (var i = 0; i < pages.length; i++) {
+        pages[i].pageNum = i + 1;
+        pages[i].onclick = function() {
+          if (this.pageNum % 2 === 0) {
+            this.classList.remove('flipped');
+            this.previousElementSibling.classList.remove('flipped');
+          } else {
+            this.classList.add('flipped');
+            this.nextElementSibling.classList.add('flipped');
+          }
+          audio.currentTime = 0;  // reinicia o áudio
+          audio.play();  // toca o áudio
+        }
+      }
+    });
        </script>
       <p>Copyright © 2024 1nfinite8ooks. All rights reserved.</p>
     </main>

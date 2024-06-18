@@ -129,22 +129,51 @@ main img {
     box-sizing: border-box; /* Certifique-se de que o preenchimento não aumenta a largura total */
   }
 }
-@media screen and (max-width: 600px) {
+
+article {
+  width: 100%;
+  max-width: 1200px;
+  height: 500px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* Impede rolagem em telas grandes */
+  white-space: nowrap;
+}
+
+/* Estilo para o conteúdo grande */
+.conteudo-grande {
+  display: inline-block; /* Mantém o elemento em linha */
+  width: 100%; /* Ajusta a largura do conteúdo grande para preencher o container */
+  max-width: 2000px; /* Mantém a largura máxima do conteúdo */
+  height: 200px;
+}
+
+/* Estilos para telas pequenas (até 600px) */
+@media screen and (max-width: 600px)  {
+  article {
+    height: 520px;
+    overflow-x: scroll; /* Permite rolagem horizontal em telas pequenas */
+    white-space: nowrap; /* Impede quebra de linha dos elementos internos */
+  }
+
+  .conteudo-grande {
+    width: 2000px; /* Mantém a largura maior que o container para permitir a rolagem */
+  }
+}
   .book {
-    width: 280px; /* reduz a largura do livro */
-    height: 360px; /* reduz a altura do livro */
+    width: 350px; /* reduz a largura do livro */
+    height: 450px; /* reduz a altura do livro */
   }
 
   .pages {
-    width: 560px; /* reduz a largura total das páginas */
-    height: 360px; /* mantém a altura das páginas */
+    width: 700px; /* reduz a largura total das páginas */
+    height: 450px; /* mantém a altura das páginas */
   }
 
   .page {
-    width: 280px; /* reduz a largura de cada página */
-    height: 360px; /* mantém a altura de cada página */
+    width: 350px; /* reduz a largura de cada página */
+    height: 450px; /* mantém a altura de cada página */
   }
-}
 .catalog {
   margin: 20px auto;
   width: 80%;
