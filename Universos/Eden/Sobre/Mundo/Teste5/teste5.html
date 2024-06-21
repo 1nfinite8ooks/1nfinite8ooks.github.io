@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eden</title>
+    <link rel="stylesheet" href="teste.css">
+</head>
+<body>
+    <header>
+        <header>
+            <img src="Eden logo.png" alt="">
+            <nav>
+        <a href="#">✦ Sobre</a>
+        <a href="../Sobre/Comics/Comics.html">✦ Comics</a>
+        <a href="../Sobre/Jogos/Jogos.html">✦ Jogos</a> 
+        <a href="../Sobre/Mundo/Mundo.html">✦ Mundo</a>
+        <a href="../Sobre/Personagens/Personagens.html">✦ Personagens</a>
+        <a href="../Sobre/Galeria/Galeria.html">✦ Galeria</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Tenha uma boa leitura!</h1>
+        <p>Lembre-se de passar por aqui para ver as novidades, <br>
+        caso voce tenha visto tudo, não se preocupe, tera um
+        <br>aviso se tiver lido aquele jornal, sempre venha aqui <br>
+        para dar uma olhadinha aos jornais novos que virão</p>
+        <h2 id="countdown">Novo jornal em: 24:00:00</h2>
+            <h3 id="message">Já lido.</h3>
+        <img class="newspaper-image" id="newspaper1" src="1.png">
+        <img class="newspaper-image" id="newspaper2" src="2.png">
+        <img class="newspaper-image" id="newspaper3" src="3.png">
+        <img class="newspaper-image" id="newspaper4" src="4.png">
+                <script>
+                  document.addEventListener('DOMContentLoaded', function() {
+                  var newspapers = ['1.png', '2.png', '3.png', '4.png'];
+                  var currentIndex = 0;
+                var countdownInterval;
+
+    // Função para exibir a próxima imagem
+    function showNextNewspaper() {
+      // Verifica se já foram mostradas todas as imagens
+      if (currentIndex >= newspapers.length) {
+        document.getElementById('message').style.display = 'block';
+        return;
+      }
+      
+      // Esconde todas as imagens
+      var images = document.getElementsByClassName('newspaper-image');
+      for (var i = 0; i < images.length; i++) {
+        images[i].style.display = 'none';
+      }
+      
+      // Exibe a próxima imagem disponível
+      var nextImage = document.getElementById('newspaper' + (currentIndex + 1));
+      if (nextImage) {
+        nextImage.style.display = 'block';
+        currentIndex++;
+      }
+    }
+    
+    // Atualiza o cronômetro a cada segundo
+    function updateCountdown() {
+      var countdownElement = document.getElementById('countdown');
+      
+      // Verifica se há um tempo de término salvo em cookies
+      var countdownEndDate = getCookie('countdownEndDate');
+      
+      if (!countdownEndDate || isNaN(countdownEndDate)) {
+        // Se não há tempo de término válido, define um novo tempo de término
+        countdownEndDate = new Date().getTime() + 86400000; // Adiciona 24 horas
+        
+        // Salva o tempo de término em cookies
+        setCookie('countdownEndDate', countdownEndDate);
+      }
+      
+      countdownInterval = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countdownEndDate - now;
+        
+        if (distance <= 0) {
+          clearInterval(countdownInterval);
+          showNextNewspaper();
+          
+          // Define o novo tempo de término para a próxima imagem
+          countdownEndDate = new Date().getTime() + 86400000; // Adiciona 24 horas
+          
+          // Salva o novo tempo de término em cookies
+          setCookie('countdownEndDate', countdownEndDate);
+          
+          // Atualiza o contador novamente para a próxima imagem
+          updateCountdown();
+        } else {
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          
+          countdownElement.textContent = 'Novo jornal em: ' + 
+            (hours < 10 ? '0' + hours : hours) + ':' + 
+            (minutes < 10 ? '0' + minutes : minutes) + ':' + 
+            (seconds < 10 ? '0' + seconds : seconds);
+        }
+      }, 1000); // Atualiza a cada segundo
+    }
+    
+    // Função auxiliar para definir um cookie
+    function setCookie(name, value) {
+      var expirationDate = new Date();
+      expirationDate.setTime(expirationDate.getTime() + 86400000); // Expira em 24 horas
+      document.cookie = name + '=' + value + '; expires=' + expirationDate.toUTCString() + '; path=/';
+    }
+    
+    // Função auxiliar para obter o valor de um cookie por nome
+    function getCookie(name) {
+      var cookies = document.cookie.split(';');
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+        if (cookie.indexOf(name + '=') === 0) {
+          return parseInt(cookie.substring(name.length + 1, cookie.length));
+        }
+      }
+      return null;
+    }
+    
+    // Exibe a primeira imagem ao carregar a página
+    showNextNewspaper();
+    
+    // Inicia o cronômetro
+    updateCountdown();
+  });
+                </script>
+                
+
+      <p>Copyright © 2024 1nfinite8ooks. All rights reserved.</p>
+    </main>
+</body>
+</html>
