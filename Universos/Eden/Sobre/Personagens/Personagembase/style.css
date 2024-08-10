@@ -75,15 +75,17 @@ main {
     }
   }
   .catalog {
+    cursor:none;
     margin: 20px auto;
     width: 80%;
     max-width: 600px;
 }
 .category {
+    cursor:none;
     margin-bottom: 10px;
 }
 .category h3 {
-    cursor: pointer;
+    cursor: none;
     margin: 0;
     padding: 10px;
     background-color: black;
@@ -448,7 +450,7 @@ visibility: visible;
 }
 
 .mortaexinfo {
-    
+
     visibility: hidden;
     width: 300px;
     background-color: rgb(182, 122, 138);
