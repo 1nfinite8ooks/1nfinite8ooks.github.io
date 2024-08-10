@@ -62,6 +62,8 @@
     </article>
 
 <script>
+    const cursor = document.getElementById('cursor');
+    const clickSound = document.getElementById('click-sound');
     const categories = document.querySelectorAll('.category');
   categories.forEach(category => {
       const title = category.querySelector('h3');
@@ -78,9 +80,7 @@
           }
       });
   });
-  const cursor = document.getElementById('cursor');
-           const clickSound = document.getElementById('click-sound');
-   
+         
            document.addEventListener('mousemove', e => {
                cursor.style.left = `${e.clientX}px`;
                cursor.style.top = `${e.clientY}px`;
