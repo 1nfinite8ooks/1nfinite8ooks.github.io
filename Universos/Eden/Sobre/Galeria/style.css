@@ -138,6 +138,7 @@ text-align: center;
 }
 
 .gallery img {
+    position: relative;
     margin: 5px;
     max-width: 100%; /* Alterado para largura máxima igual a 100% */
     max-height: auto; /* Alterado para altura máxima automática */
