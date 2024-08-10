@@ -174,24 +174,7 @@
                 <script>
         const cursor = document.getElementById('cursor');
         const clickSound = document.getElementById('click-sound');
-        const categories = document.querySelectorAll('.category');
-        categories.forEach(category => {
-            const title = category.querySelector('h3');
-            const content = category.querySelector('.category-content');
-    
-            title.addEventListener('click', () => {
-                if (content.style.display === 'block') {
-                    content.style.display = 'none';
-                } else {
-                    categories.forEach(c => {
-                        c.querySelector('.category-content').style.display = 'none';
-                    });
-                    content.style.display = 'block';
-                }
-            });
-        });
-   
-           document.addEventListener('mousemove', e => {
+        document.addEventListener('mousemove', e => {
                cursor.style.left = `${e.clientX}px`;
                cursor.style.top = `${e.clientY}px`;
            });
@@ -228,6 +211,22 @@
             cursor.style.backgroundImage = 'url("1.png")'; // Retorna à imagem padrão
             document.body.style.cursor = 'none'; 
         });// Esconde o cursor padrão
+        const categories = document.querySelectorAll('.category');
+        categories.forEach(category => {
+            const title = category.querySelector('h3');
+            const content = category.querySelector('.category-content');
+    
+            title.addEventListener('click', () => {
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    categories.forEach(c => {
+                        c.querySelector('.category-content').style.display = 'none';
+                    });
+                    content.style.display = 'block';
+                }
+            });
+        });
                 </script>
         </section>
         <p>Copyright © 2024 1nfinite8ooks. All rights reserved.</p>
