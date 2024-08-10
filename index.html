@@ -9,6 +9,12 @@
 </head>
 <body>
     <body>
+        
+        <header>
+        <header>
+        </header>
+        <div id="cursor"></div>
+        <audio id="click-sound" src="mixkit-arcade-game-jump-coin-216.wav"></audio>
         <main>
             <img src="header.png" alt="" srcset="">
             <h1>Bem vindo!</h1>
@@ -44,7 +50,52 @@
 
                 ✦ Não use minha arte para alimentar IA. <br>
             </p>
-           <a href="Universos/Universos.html" id="buttom" target="_self">Compreendi, e desejo prosseguir.</a>
+           <a href="Universos/Universos.html" id="butao" target="_self">Compreendi, e desejo prosseguir.</a>
        </main>
+    </audio>
+        <!-- Adicione o arquivo de áudio aqui -->
+   
+       <script>
+           const cursor = document.getElementById('cursor');
+           const clickSound = document.getElementById('click-sound');
+   
+           document.addEventListener('mousemove', e => {
+               cursor.style.left = `${e.clientX}px`;
+               cursor.style.top = `${e.clientY}px`;
+           });
+   
+           document.addEventListener('mousedown', () => {
+               let frames = ['2.png', '3.png', '4.png', '5.png', '6.png'];
+               let i = 0;
+   
+               function animateClick() {
+                   if (i < frames.length) {
+                       cursor.style.backgroundImage = `url('${frames[i]}')`;
+                       i++;
+                       setTimeout(animateClick, 50); // Controla a velocidade da animação
+                   } else {
+                       cursor.style.backgroundImage = `url('1.png')`; // Retorna à imagem padrão
+                   }
+               }
+   
+               animateClick();
+               clickSound.play(); // Toca o som ao clicar
+           });
+   
+           document.addEventListener('mouseup', () => {
+            cursor.style.backgroundImage = `url('1.png')`; // Retorna à imagem padrão
+        });
+
+        // Manipulação do cursor quando entra e sai do elemento
+        pointerTarget.addEventListener('mouseenter', () => {
+            cursor.style.backgroundImage = 'url("7.png")'; // Imagem da mão apontando
+            document.body.style.cursor = 'pointer'; // Define o cursor padrão como pointer
+        });
+
+        pointerTarget.addEventListener('mouseleave', () => {
+            cursor.style.backgroundImage = 'url("1.png")'; // Retorna à imagem padrão
+            document.body.style.cursor = 'none'; 
+        });// Esconde o cursor padrão
+       </script>
 </body>
 </html>
