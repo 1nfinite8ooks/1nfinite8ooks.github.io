@@ -5,6 +5,7 @@ body {
     font-size: 20px;
 }
 header{
+  cursor: none;
 background-color: black;
 font-family: 'Times New Roman', Times, serif; 
 padding: 10px;
@@ -12,6 +13,7 @@ margin: auto;
 cursor: none;
 }
 main > a {
+    cursor: none;
     background-color: black;
 
 }
@@ -79,7 +81,7 @@ main {
     }
   }
   .catalog {
-    
+
     margin: 20px auto;
     width: 80%;
     max-width: 600px;
@@ -88,6 +90,7 @@ main {
     margin-bottom: 10px;
 }
 .category h3 {
+    cursor: none;
     cursor: pointer;
     margin: 0;
     padding: 10px;
@@ -97,6 +100,7 @@ main {
     text-align: center; /* Centraliza o texto horizontalmente */
 }
 .category-content {
+    cursor: none;
     display: none; /* Inicialmente oculto */
     padding: 10px;
     margin: auto;
@@ -104,6 +108,7 @@ main {
     border-top: none;
 }
 .category-content p {
+cursor: none;
 margin: 0;
 padding: 5px;
 background-color: #f0f0f0;
@@ -112,6 +117,7 @@ overflow-x: auto; /* Adiciona uma barra de rolagem horizontal se os links forem 
 }
 
 .category-content p a {
+cursor: none;
 display: inline-block; /* Permite que os links se comportem como blocos inline */
 margin-right: 5px; /* Adiciona um espaço entre os links */
 margin-bottom: 5px; /* Adiciona um espaço abaixo dos links */
@@ -127,6 +133,7 @@ text-decoration: none; /* Remove o sublinhado padrão */
 }
 
 a {
+  cursor: none;
 background-color: black;
 text-decoration: none;
 color: white;
@@ -145,6 +152,7 @@ text-align: center;
   }
   
   area {
+    cursor: none;
     cursor: pointer;
   }
 
