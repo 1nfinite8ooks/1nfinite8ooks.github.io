@@ -189,7 +189,7 @@ text-align: center;
     padding: 8px 12px; /* Reduz o preenchimento */
     margin: 0 3px; /* Reduz a margem */
     border: 1px solid #000000;
-    cursor: pointer;
+    cursor: none;
 }
 
 /* Estilos para o fundo preto apenas na página de paginação */
