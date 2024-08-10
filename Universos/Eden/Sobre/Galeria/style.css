@@ -1,10 +1,8 @@
 body {
-  cursor: none; /* Esconde o cursor padrão */
   text-align: center;
   background-color: black;
   font-size: 20px;
 }
-
 header{
 background-color: black;
 font-family: 'Times New Roman', Times, serif; 
@@ -15,21 +13,7 @@ main > a {
   background-color: black;
 
 }
-#cursor {
-  cursor:none;
-  position: absolute;
-  width: 64px; /* Ajuste conforme necessário */
-  height: 64px; /* Ajuste conforme necessário */
-  pointer-events: none; /* Faz com que o cursor não interfira com cliques */
-  background-image: url('1.png'); /* Imagem da mão parada */
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: fixed; /* Alterado para fixed para seguir o scroll */
-  transform: translate(-50%, -50%);
-}
-
 nav > a {
-cursor: none;
 text-decoration: none;
 color: white;
 font-weight: bold;
@@ -41,18 +25,15 @@ display: inline-flex; /* Altera o comportamento padrão para que os links fiquem
 /* Estilos para telas pequenas usando media query */
 @media screen and (max-width: 600px) {
 nav {
-cursor: none;
 text-align: center;
 }
 nav > a {
-cursor: none;
 margin-right: 80px; /* Reduz o espaço entre os links */
 font-size: 20px; /* Ajusta o tamanho da fonte para torná-la mais legível */
 display: flex;
 }
 }
 main {
-  cursor: none;
   align-items: center;
   background-color: white;
   width: 1200px;
@@ -62,36 +43,31 @@ main {
 }
 @media screen and (max-width: 500px) {
   main {
-    cursor: none;
     width: 450px;
     margin: 0 auto; /* Para centralizar o conteúdo */
   }
 }
 main img {
-
   max-width: 100%;
   height: auto; }
 /* Estilos para telas médias (entre 450px e 1200px) */
 @media screen and (min-width: 451px) and (max-width: 1199px) {
   main {
-  
     width: 100%; /* Use a largura total da tela */
     padding: 0 20px; /* Adicione algum espaço de preenchimento nas laterais */
     box-sizing: border-box; /* Certifique-se de que o preenchimento não aumenta a largura total */
   }
 }
 .catalog {
-  cursor: none;
   margin: 20px auto;
   width: 80%;
   max-width: 600px;
 }
 .category {
-  cursor: none;
   margin-bottom: 10px;
 }
 .category h3 {
-  cursor: none;
+  cursor: pointer;
   margin: 0;
   padding: 10px;
   background-color: black;
@@ -100,7 +76,6 @@ main img {
   text-align: center; /* Centraliza o texto horizontalmente */
 }
 .category-content {
-  cursor: none;
   display: none; /* Inicialmente oculto */
   padding: 10px;
   margin: auto;
@@ -108,7 +83,6 @@ main img {
   border-top: none;
 }
 .category-content p {
-cursor: none;
 margin: 0;
 padding: 5px;
 background-color: #f0f0f0;
@@ -117,7 +91,6 @@ overflow-x: auto; /* Adiciona uma barra de rolagem horizontal se os links forem 
 }
 
 .category-content p a {
-cursor: none;
 display: inline-block; /* Permite que os links se comportem como blocos inline */
 margin-right: 5px; /* Adiciona um espaço entre os links */
 margin-bottom: 5px; /* Adiciona um espaço abaixo dos links */
@@ -129,12 +102,10 @@ text-decoration: none; /* Remove o sublinhado padrão */
 }
 /* Centralizar conteúdo */
 .category-content {
-  cursor: none;
   padding-left: 20px; /* Adiciona um recuo para manter o conteúdo alinhado à esquerda */
 }
 
 a {
-cursor: none;
 background-color: black;
 text-decoration: none;
 color: white;
@@ -144,7 +115,6 @@ text-align: center;
 }
 
 .gallery {
-    cursor: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -152,14 +122,12 @@ text-align: center;
 }
 
 .gallery img {
-    cursor: none;
     margin: 5px;
     max-width: 100%; /* Alterado para largura máxima igual a 100% */
     max-height: auto; /* Alterado para altura máxima automática */
 }
 
 .nsfw-overlay {
-    cursor: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -174,40 +142,34 @@ text-align: center;
     cursor: pointer;
 }
 .img-container {
-    cursor: none;
     position: relative;
 }
 
 .img-container:hover .nsfw-overlay {
-    cursor: none;
     display: flex; /* Exibe a superposição quando a imagem é hover */
 }
 
 
 .current-page {
-    cursor: none;
     background-color: black;
     color: white;
     font-weight: bold;
 }
 .pagination {
-    cursor: none;
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
 
 .pagination .page-link {
-    cursor: none;
     padding: 8px 12px; /* Reduz o preenchimento */
     margin: 0 3px; /* Reduz a margem */
     border: 1px solid #000000;
-    
+    cursor: pointer;
 }
 
 /* Estilos para o fundo preto apenas na página de paginação */
 .pagination-page {
-    cursor: none;
     background-color: #000000;
     color: #ffffff; /* Cor do texto no fundo preto */
 }
@@ -221,18 +183,15 @@ h2 {
 /* Estilos para telas pequenas */
 @media screen and (max-width: 450px) {
     .gallery img {
-      cursor: none;
         margin: 3px; /* Reduz a margem */
     }
 
  .nsfw-overlay {
-        cursor: none;
         font-size: 14px; /* Reduz a fonte ainda mais para telas muito pequenas */
     }
 }
 
     .pagination .page-link {
-        cursor: none;
         padding: 6px 10px; /* Reduz ainda mais o preenchimento */
         margin: 0 2px; /* Reduz ainda mais a margem */
     }
