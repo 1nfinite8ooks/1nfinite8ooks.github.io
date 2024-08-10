@@ -168,6 +168,7 @@ text-align: center;
 
 
 .current-page {
+  position: relative;
     background-color: black;
     color: white;
     font-weight: bold;
@@ -189,6 +190,7 @@ text-align: center;
 
 /* Estilos para o fundo preto apenas na página de paginação */
 .pagination-page {
+  position: relative;
     background-color: #000000;
     color: #ffffff; /* Cor do texto no fundo preto */
 }
