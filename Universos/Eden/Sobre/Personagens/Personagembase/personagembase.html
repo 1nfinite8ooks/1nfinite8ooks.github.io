@@ -25,7 +25,7 @@
     <main>
         <br>
         <h1 id="nome">Alice</h1>
-        <article>
+        <article style="cursor: none;">
             <div class="readia">
                 <a href="#" target="_blank"><img src="Rei diabo .png" alt=""></a>
                 <span class="readiainfo">Esse personagem faz parte da Hierarquia do Diabo.
@@ -108,10 +108,10 @@
         </article>
         <section>
             
-            <article>
+            <article style="cursor: none;">
              <img src="Personagem.png" alt="">
             </article>
-            <article>
+            <article style="cursor: none;">
                 <a href="#" target="_self"><img src="Perso Antes .png"alt=""></a>
                 <a href="#" target="_self"><img src="Perso Agora .png" alt=""></a>
                 <a href="#" target="_self"><img src="Perso depois.png" alt=""></a>
@@ -172,6 +172,8 @@
                     </div>
                 </div>
                 <script>
+        const cursor = document.getElementById('cursor');
+        const clickSound = document.getElementById('click-sound');
         const categories = document.querySelectorAll('.category');
         categories.forEach(category => {
             const title = category.querySelector('h3');
@@ -188,8 +190,6 @@
                 }
             });
         });
-        const cursor = document.getElementById('cursor');
-           const clickSound = document.getElementById('click-sound');
    
            document.addEventListener('mousemove', e => {
                cursor.style.left = `${e.clientX}px`;

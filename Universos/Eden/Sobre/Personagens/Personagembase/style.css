@@ -448,6 +448,7 @@ visibility: visible;
 }
 
 .mortaexinfo {
+    
     visibility: hidden;
     width: 300px;
     background-color: rgb(182, 122, 138);
@@ -460,15 +461,18 @@ visibility: visible;
 }
 
 .mortaex:hover .mortaexinfo {
+
 visibility: visible;
 }
 
 .readia {
+
     position: relative;
     display: inline-block;
 }
 
 .readiainfo {
+
     visibility: hidden;
     width: 300px;
     background-color: rgb(110, 0, 0);
@@ -481,15 +485,18 @@ visibility: visible;
 }
 
 .readia:hover .readiainfo {
+
     visibility: visible;
 }
 
 .readeu {
+
     position: relative;
     display: inline-block;
 }
 
 .readeuinfo {
+
     visibility: hidden;
     width: 300px;
     background-color: rgb(109, 146, 255);
@@ -502,14 +509,17 @@ visibility: visible;
 }
 
 .readeu:hover .readeuinfo {
+
     visibility: visible;
 }
 
 .se {
+
     position: relative;
     display: inline-block;
 }
 .seinfo {
+
     visibility: hidden;
     width: 300px;
     background-color: rgb(0, 57, 228);
@@ -521,6 +531,7 @@ visibility: visible;
     z-index: 1;
 } 
 .se:hover .seinfo {
+
 visibility: visible;
 }
 #nome {
