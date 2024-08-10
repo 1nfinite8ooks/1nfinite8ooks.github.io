@@ -15,7 +15,9 @@ body {
   main > a {
     cursor: none;
     background-color: black;
-
+  }
+ a {
+cursor: none;
   }
   main img {
   cursor: none;
