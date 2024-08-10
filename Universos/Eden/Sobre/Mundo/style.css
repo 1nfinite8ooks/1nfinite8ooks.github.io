@@ -83,7 +83,7 @@ main img {
     margin-bottom: 10px;
 }
 .category h3 {
-    cursor: pointer;
+    cursor: none;
     margin: 0;
     padding: 10px;
     background-color: black;
