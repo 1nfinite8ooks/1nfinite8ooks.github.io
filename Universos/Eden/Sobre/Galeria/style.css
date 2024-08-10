@@ -68,13 +68,13 @@ main {
   }
 }
 main img {
-  cursor: none;
+
   max-width: 100%;
   height: auto; }
 /* Estilos para telas médias (entre 450px e 1200px) */
 @media screen and (min-width: 451px) and (max-width: 1199px) {
   main {
-    cursor: none;
+  
     width: 100%; /* Use a largura total da tela */
     padding: 0 20px; /* Adicione algum espaço de preenchimento nas laterais */
     box-sizing: border-box; /* Certifique-se de que o preenchimento não aumenta a largura total */
@@ -92,7 +92,6 @@ main img {
 }
 .category h3 {
   cursor: none;
-  cursor: pointer;
   margin: 0;
   padding: 10px;
   background-color: black;
