@@ -60,17 +60,15 @@ main img {
   }
 }
   .catalog {
-    cursor: none;
     margin: 20px auto;
     width: 80%;
     max-width: 600px;
 }
 .category {
-    cursor: none;
+    
     margin-bottom: 10px;
 }
 .category h3 {
-    cursor: none;
     margin: 0;
     padding: 10px;
     background-color: black;
