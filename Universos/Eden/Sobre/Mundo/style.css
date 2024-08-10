@@ -1,17 +1,33 @@
 body {
+  cursor: none; /* Esconde o cursor padrão */
   text-align: center;
   background-color: black;
   font-size: 20px;
 }
+
 header{
+cursor: none;
 background-color: black;
 font-family: 'Times New Roman', Times, serif; 
 padding: 10px;
 margin: auto;
 }
 main > a {
+  cursor: none;
   background-color: black;
 
+}
+#cursor {
+  cursor:none;
+  position: absolute;
+  width: 64px; /* Ajuste conforme necessário */
+  height: 64px; /* Ajuste conforme necessário */
+  pointer-events: none; /* Faz com que o cursor não interfira com cliques */
+  background-image: url('1.png'); /* Imagem da mão parada */
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: fixed; /* Alterado para fixed para seguir o scroll */
+  transform: translate(-50%, -50%);
 }
 nav > a {
 text-decoration: none;
