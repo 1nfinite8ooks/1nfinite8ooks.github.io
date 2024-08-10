@@ -22,6 +22,9 @@ cursor: none;
   main img {
   cursor: none;
   }
+  #coisas{
+    position: relative;
+  }
   #cursor {
     cursor:none;
     position: absolute;
@@ -34,6 +37,7 @@ cursor: none;
     position: fixed; /* Alterado para fixed para seguir o scroll */
     transform: translate(-50%, -50%);
     z-index: 9999;
+    
   }
 nav > a {
   text-decoration: none;
