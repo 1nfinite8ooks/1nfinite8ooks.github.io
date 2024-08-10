@@ -42,6 +42,11 @@
             </div>
         </div>
         <div class="category">
+            <h3>Geração 0XX</h3>
+            <div class="category-content">
+                <p>Nada por enquanto... </p>
+            </div>
+        <div class="category">
             <h3>Geração 01</h3>
             <div class="category-content">
                 <p>Nada por enquanto... </p>
@@ -54,7 +59,7 @@
             </div>
         </div>
         <div class="category">
-            <h3>Geraçãp 04</h3>
+            <h3>Geração 04</h3>
             <div class="category-content">
                 <p>Nada por enquanto... </p>
             </div>
@@ -62,8 +67,6 @@
     </article>
 
 <script>
-    const cursor = document.getElementById('cursor');
-    const clickSound = document.getElementById('click-sound');
     const categories = document.querySelectorAll('.category');
   categories.forEach(category => {
       const title = category.querySelector('h3');
@@ -80,38 +83,6 @@
           }
       });
   });
-         
-           document.addEventListener('mousemove', e => {
-               cursor.style.left = `${e.clientX}px`;
-               cursor.style.top = `${e.clientY}px`;
-           });
-   
-           document.addEventListener('mousedown', () => {
-               let frames = ['2.png', '3.png', '4.png', '5.png', '6.png'];
-               let i = 0;
-   
-               function animateClick() {
-                   if (i < frames.length) {
-                       cursor.style.backgroundImage = `url('${frames[i]}')`;
-                       i++;
-                       setTimeout(animateClick, 50); // Controla a velocidade da animação
-                   } else {
-                       cursor.style.backgroundImage = `url('1.png')`; // Retorna à imagem padrão
-                   }
-               }
-   
-               animateClick();
-               clickSound.play(); // Toca o som ao clicar
-           });
-   
-           document.addEventListener('mouseup', () => {
-            cursor.style.backgroundImage = `url('1.png')`; // Retorna à imagem padrão
-        });
-        pointerTarget.addEventListener('mouseleave', () => {
-            cursor.style.backgroundImage = 'url("1.png")'; // Retorna à imagem padrão
-            document.body.style.cursor = 'none'; 
-        });// Esconde o cursor padrão
-        
 </script>
 <p>Copyright © 2024 1nfinite8ooks. All rights reserved.</p>       
 </main>
