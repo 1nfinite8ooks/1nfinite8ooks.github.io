@@ -219,6 +219,7 @@ h2 {
 }
 
     .pagination .page-link {
+        cursor: relative;
         padding: 6px 10px; /* Reduz ainda mais o preenchimento */
         margin: 0 2px; /* Reduz ainda mais a margem */
     }
