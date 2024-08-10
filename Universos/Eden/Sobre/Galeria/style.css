@@ -172,12 +172,14 @@ text-align: center;
 
 
 .current-page {
+  cursor: none;
   position: relative;
     background-color: black;
     color: white;
     font-weight: bold;
 }
 .pagination {
+    cursor: none;
     display: flex;
     justify-content: center;
     margin-top: 20px;
