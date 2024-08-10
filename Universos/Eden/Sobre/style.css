@@ -9,6 +9,7 @@ background-color: black;
 font-family: 'Times New Roman', Times, serif; 
 padding: 10px;
 margin: auto;
+cursor: none;
 }
 main > a {
     background-color: black;
@@ -27,6 +28,7 @@ main > a {
   transform: translate(-50%, -50%);
 }
 nav > a {
+  cursor: none;
   text-decoration: none;
   color: white;
   font-weight: bold;
@@ -38,9 +40,11 @@ nav > a {
 /* Estilos para telas pequenas usando media query */
 @media screen and (max-width: 600px) {
 nav {
+  cursor: none;
   text-align: center;
 }
 nav > a {
+  cursor: none;
   margin-right: 80px; /* Reduz o espaço entre os links */
   font-size: 20px; /* Ajusta o tamanho da fonte para torná-la mais legível */
   display: flex;
@@ -75,6 +79,7 @@ main {
     }
   }
   .catalog {
+    
     margin: 20px auto;
     width: 80%;
     max-width: 600px;
