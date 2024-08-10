@@ -141,10 +141,12 @@ text-decoration: none; /* Remove o sublinhado padrão */
 }
 
 .angelis {
+cursor: none;
     position: relative;
     display: inline-block;
 }
 .angelis .angelisinfo {
+ cursor: none;       
         visibility: hidden;
         width: 300px;
         background-color: rgb(255, 232, 115);
@@ -156,14 +158,17 @@ text-decoration: none; /* Remove o sublinhado padrão */
         z-index: 1;
 }
 .angelis:hover .angelisinfo {
+cursor: none;
     visibility: visible;
 }
 
 .demilis {
+cursor: none;
 position: relative;
 display: inline-block;
 }
 .demilis .demilisinfo {
+cursor: none;
     visibility: hidden;
         width: 300px;
         background-color: rgb(204, 0, 0);
@@ -176,15 +181,18 @@ display: inline-block;
         z-index: 1;
 }
 .demilis:hover .demilisinfo {
+cursor: none;
     visibility: visible;
 }
 
 .iluminis {
+cursor: none;
     position: relative;
     display: inline-block;
     }
 
 .iluminisinfo {
+cursor: none;
     visibility: hidden;
     width: 300px;
     background-color: rgb(184, 0, 181);
@@ -197,16 +205,19 @@ display: inline-block;
 }
 
 .iluminis:hover .iluminisinfo {
+cursor: none;
     visibility: visible;
 }
     
 
 .bro{
+cursor: none;
     position: relative;
     display: inline-block;
 }
 
 .broinfo{
+cursor: none;
     visibility: hidden;
     width: 300px;
     background-color: rgb(0, 0, 0);
@@ -218,15 +229,18 @@ display: inline-block;
     z-index: 1;
 }
 .bro:hover .broinfo {
+cursor: none;
     visibility: visible;
 }
 
 .lo {
+cursor: none;
     position: relative;
     display: inline-block;
 }
 
 .loinfo {
+cursor: none;
     visibility: hidden;
     width: 300px;
     background-color: rgb(255, 173, 220);
@@ -238,15 +252,18 @@ display: inline-block;
     z-index: 1;
 }
 .lo:hover .loinfo {
+cursor: none;
     visibility: visible;
 }
 
 .lu {
+cursor: none;
     position: relative;
     display: inline-block;
 }
 
 .luinfo {
+cursor: none;
     visibility: hidden;
     width: 300px;
     background-color: rgb(255, 11, 149);
@@ -259,14 +276,17 @@ display: inline-block;
 }
 
 .lu:hover .luinfo {
+cursor: none;
     visibility: visible;
 }
 
 .wis {
+cursor: none;
     position: relative;
     display: inline-block;
 }
 .wisinfo {
+cursor: none;
     visibility: hidden;
     width: 300px;
     background-color: rgb(216, 0, 0);
@@ -278,14 +298,17 @@ display: inline-block;
 }
 
 .wis:hover .wisinfo {
+cursor: none;
     visibility: visible;
 }
 
 .royal {
+
     position: relative;
     display: inline-block;
 }
 .royalinfo {
+cursor: none;
     visibility: hidden;
     width: 300px;
     background-color: rgb(255, 225, 125);
@@ -297,15 +320,18 @@ display: inline-block;
     z-index: 1;
 }
 .royal:hover .royalinfo{
+cursor: none;
     visibility: visible;
 }
 
 .angeex {
+cursor: none;
     position: relative;
     display: inline-block; 
 }
 
 .angeexinfo {
+cursor: none;
     visibility: hidden;
     width: 300px;
     background-color: rgb(255, 232, 115);
@@ -318,14 +344,17 @@ display: inline-block;
 }
 
 .angeex:hover .angeexinfo {
+cursor: none;
     visibility: visible;
 }
 
 .bru {
+cursor: none;
     position: relative;
     display: inline-block;   
 }
 .bruinfo {
+cursor: none;
     visibility: hidden;
     width: 300px;
     background-color: rgb(0, 0, 0);
@@ -337,14 +366,17 @@ display: inline-block;
     z-index: 1; 
 }
 .bru:hover .bruinfo {
+cursor: none;
     visibility: visible;
 }
 
 .mor {
+cursor: none;
     position: relative;
     display: inline-block; 
 }
 .morinfo {
+cursor: none;
     visibility: hidden;
     width: 300px;
     background-color: rgb(63, 1, 56);
@@ -357,15 +389,18 @@ display: inline-block;
 }
 
 .mor:hover .morinfo {
+cursor: none;
     visibility: visible;
 }
 
 .demiex {
+
     position: relative;
     display: inline-block;
 }
 
 .demiexinfo {
+cursor: none;
     visibility: hidden;
     width: 300px;
     background-color: rgb(204, 0, 0);
@@ -378,15 +413,18 @@ display: inline-block;
 }
 
 .demiex:hover .demiexinfo {
+cursor: none;
     visibility: visible;
 }
 
 .ds {
+cursor: none;
     position: relative;
     display: inline-block;
 }
 
 .dsinfo{
+cursor: none;
     visibility: hidden;
     width: 300px;
     background-color: rgb(195, 0, 0);
@@ -399,15 +437,18 @@ display: inline-block;
 }
 
 .ds:hover .dsinfo {
+cursor: none;
     visibility: visible;
 }
 
 .mag {
+cursor: none;
     position: relative;
     display: inline-block;
 }
 
 .maginfo {
+cursor: none;
     visibility: hidden;
     width: 300px;
     background-color: rgb(193, 0, 246);
@@ -420,15 +461,18 @@ display: inline-block;
 }
 
 .mag:hover .maginfo {
+cursor: none;
 visibility: visible;
 }
 
 .morta {
+cursor: none;
     position: relative;
     display: inline-block;
 }
 
 .mortainfo {
+cursor: none;
     visibility: hidden;
     width: 300px;
     background-color: rgb(38, 165, 74);
@@ -441,16 +485,18 @@ visibility: visible;
 }
 
 .morta:hover .mortainfo {
+cursor: none;
     visibility: visible;
 }
  
 .mortaex {
+cursor: none;
     position: relative;
     display: inline-block;
 }
 
 .mortaexinfo {
-
+cursor: none;
     visibility: hidden;
     width: 300px;
     background-color: rgb(182, 122, 138);
@@ -463,12 +509,12 @@ visibility: visible;
 }
 
 .mortaex:hover .mortaexinfo {
-
+cursor: none;
 visibility: visible;
 }
 
 .readia {
-
+cursor: none;
     position: relative;
     display: inline-block;
 }
@@ -487,18 +533,18 @@ visibility: visible;
 }
 
 .readia:hover .readiainfo {
-
+cursor: none;
     visibility: visible;
 }
 
 .readeu {
-
+cursor: none;
     position: relative;
     display: inline-block;
 }
 
 .readeuinfo {
-
+cursor: none;
     visibility: hidden;
     width: 300px;
     background-color: rgb(109, 146, 255);
@@ -511,7 +557,7 @@ visibility: visible;
 }
 
 .readeu:hover .readeuinfo {
-
+cursor: none;
     visibility: visible;
 }
 
@@ -521,7 +567,7 @@ visibility: visible;
     display: inline-block;
 }
 .seinfo {
-
+cursor: none;
     visibility: hidden;
     width: 300px;
     background-color: rgb(0, 57, 228);
@@ -533,7 +579,7 @@ visibility: visible;
     z-index: 1;
 } 
 .se:hover .seinfo {
-
+cursor: none;
 visibility: visible;
 }
 #nome {
