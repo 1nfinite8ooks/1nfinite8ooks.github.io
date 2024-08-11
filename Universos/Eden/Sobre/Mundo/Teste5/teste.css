@@ -28,6 +28,7 @@ main > a {
   background-repeat: no-repeat;
   position: fixed; /* Alterado para fixed para seguir o scroll */
   transform: translate(-50%, -50%);
+  z-index: 9999;
 }
 
 nav > a {
@@ -111,6 +112,7 @@ main img {
 }
 
 article {
+  position: relative;
   cursor: none;
   white-space: nowrap; /* Impede quebra de linha dos elementos internos */
   max-width: 1500px;
