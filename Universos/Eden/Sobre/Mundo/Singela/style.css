@@ -107,6 +107,7 @@ main img {
   text-align: center; /* Centraliza o texto horizontalmente */
 }
 .category-content {
+  cursor: none;
   display: none; /* Inicialmente oculto */
   padding: 10px;
   margin: auto;
@@ -114,6 +115,7 @@ main img {
   border-top: none;
 }
 .category-content p {
+cursor: none;
 margin: 0;
 padding: 5px;
 background-color: #f0f0f0;
