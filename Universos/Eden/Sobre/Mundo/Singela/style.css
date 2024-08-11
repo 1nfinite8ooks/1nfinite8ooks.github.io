@@ -56,7 +56,6 @@ display: flex;
 }
 main {
   cursor: none;
-  position: relative;
   align-items: center;
   background-color: white;
   width: 1200px;
