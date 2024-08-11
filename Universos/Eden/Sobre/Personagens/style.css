@@ -82,6 +82,7 @@ main img {
   }
 }
   .catalog {
+    position: relative;
     cursor: none;
     margin: 20px auto;
     width: 80%;
