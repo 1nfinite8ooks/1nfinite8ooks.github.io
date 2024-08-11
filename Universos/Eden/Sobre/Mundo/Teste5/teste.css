@@ -114,11 +114,7 @@ main img {
 article {
   position: relative;
   cursor: none;
-  white-space: nowrap; /* Impede quebra de linha dos elementos internos */
   max-width: 1500px;
-  height: 200px;
-  padding: 20px;
-  box-sizing: border-box;
 }
 
 /* Estilo para o conteúdo grande */
