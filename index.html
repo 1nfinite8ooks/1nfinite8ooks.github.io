@@ -98,15 +98,6 @@
             cursor.style.backgroundImage = 'url("1.png")'; // Retorna à imagem padrão
             document.body.style.cursor = 'none'; 
         });// Esconde o cursor padrão
-        
-        document.addEventListener("DOMContentLoaded", function() {
-            const currentURL = window.location.href;
-            const targetPath = '/Menu/';
-
-            if (currentURL.includes(targetPath)) {
-                const newURL = currentURL.replace(targetPath, '');
-                window.location.href = newURL;
-            }
        </script>
 </body>
 </html>
