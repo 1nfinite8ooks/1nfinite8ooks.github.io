@@ -30,6 +30,7 @@ main > a {
   transform: translate(-50%, -50%);
 }
 nav > a {
+cursor: none;
 text-decoration: none;
 color: white;
 font-weight: bold;
@@ -64,6 +65,9 @@ main {
     width: 450px;
     margin: 0 auto; /* Para centralizar o conteúdo */
   }
+}
+#coisas {
+  position: relative;
 }
 main img {
   max-width: 100%;
