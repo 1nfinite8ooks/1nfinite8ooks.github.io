@@ -112,8 +112,6 @@ main img {
 
 article {
   cursor: none;
-  overflow-y: scroll;
-  overflow-x: scroll; /* Permite rolagem horizontal em telas pequenas */
   white-space: nowrap; /* Impede quebra de linha dos elementos internos */
   max-width: 1500px;
   height: 200px;
