@@ -135,6 +135,7 @@ display: flex;
   transform: rotateY(0deg);
 }
 main {
+  position: relative;
   cursor: none;
   align-items: center;
   background-color: white;
