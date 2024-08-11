@@ -97,6 +97,7 @@ main {
   }
 }
 main img {
+  position: relative;
   cursor: none;
   max-width: 100%;
   height: auto; }
