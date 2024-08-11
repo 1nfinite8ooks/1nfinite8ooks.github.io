@@ -209,11 +209,13 @@ article {
   }
 
   .pages {
+    position: relative;
     width: 700px; /* reduz a largura total das páginas */
     height: 450px; /* mantém a altura das páginas */
   }
 
   .page {
+    position: relative;
     width: 350px; /* reduz a largura de cada página */
     height: 450px; /* mantém a altura de cada página */
   }
