@@ -53,18 +53,21 @@ display: flex;
 }
 }
 .newspaper-image {
+  position: relative;
   cursor: none;
   display: none;
   max-width: 100%;
   height: auto;
 }
 #message {
+  position: relative;
   cursor: none;
   color: red;
   font-weight: bold;
   display: none;
 }
 #countdown {
+  position: relative;
   cursor: none;
   font-weight: bold;
   font-size: 1.5em;
