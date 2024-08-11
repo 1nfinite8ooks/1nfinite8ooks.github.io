@@ -115,7 +115,6 @@ overflow-x: auto; /* Adiciona uma barra de rolagem horizontal se os links forem 
 }
 
 article {
-    position: relative;
     cursor: none;
     padding-inline: 50px;
 }
