@@ -1,19 +1,37 @@
 body {
+  cursor: none; /* Esconde o cursor padrão */
   text-align: center;
   background-color: black;
   font-size: 20px;
 }
+
 header{
+cursor: none;
 background-color: black;
 font-family: 'Times New Roman', Times, serif; 
 padding: 10px;
 margin: auto;
 }
 main > a {
+  cursor: none;
   background-color: black;
 
 }
+#cursor {
+  cursor:none;
+  position: absolute;
+  width: 64px; /* Ajuste conforme necessário */
+  height: 64px; /* Ajuste conforme necessário */
+  pointer-events: none; /* Faz com que o cursor não interfira com cliques */
+  background-image: url('1.png'); /* Imagem da mão parada */
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: fixed; /* Alterado para fixed para seguir o scroll */
+  transform: translate(-50%, -50%);
+}
+
 nav > a {
+cursor: none;
 text-decoration: none;
 color: white;
 font-weight: bold;
@@ -34,13 +52,18 @@ display: flex;
 }
 }
 .book {
+  cursor: none;
   width: 350px; /* aumenta a largura do livro para 350px */
   height: 450px; /* aumenta a altura do livro para 450px */
   perspective: 900px; /* mantém o ajuste de perspectiva */
 
 }
-
+#coisas {
+  cursor: none;
+  position: relative;
+}
 .pages {
+  cursor: none;
   width: 700px; /* largura total das páginas (2 páginas por vez) */
   height: 450px; /* altura das páginas */
   position: relative;
@@ -48,6 +71,7 @@ display: flex;
 }
 
 .page {
+  cursor: none;
   width: 350px; /* largura de cada página */
   height: 450px; /* altura de cada página */
   position: absolute;
@@ -62,6 +86,7 @@ display: flex;
 }
 
 .page:nth-child(even) {
+  cursor: none;
   pointer-events: none;
   transform: rotateY(180deg);
   transform-origin: 100% 0;
@@ -70,6 +95,7 @@ display: flex;
 }
 
 .page:nth-child(odd) {
+  cursor: none;
   pointer-events: all;
   transform: rotateY(0deg);
   right: 0;
@@ -77,6 +103,7 @@ display: flex;
 }
 
 .page:before {
+  cursor: none;
   content: '';
   position: absolute;
   top: 0;
@@ -108,6 +135,7 @@ display: flex;
   transform: rotateY(0deg);
 }
 main {
+  cursor: none;
   align-items: center;
   background-color: white;
   width: 1200px;
@@ -129,6 +157,7 @@ main {
   }
 }
 main img {
+  cursor: none;
   max-width: 100%;
   height: auto; }
 /* Estilos para telas médias (entre 450px e 1200px) */
@@ -152,6 +181,8 @@ article {
 
 /* Estilo para o conteúdo grande */
 .conteudo-grande {
+  position: relative;
+  cursor: none;
   display: inline-block; /* Mantém o elemento em linha */
   width: 100%; /* Ajusta a largura do conteúdo grande para preencher o container */
   max-width: 2000px; /* Mantém a largura máxima do conteúdo */
@@ -171,6 +202,8 @@ article {
   }
 }
   .book {
+    cursor: none;
+    position: relative;
     width: 350px; /* reduz a largura do livro */
     height: 450px; /* reduz a altura do livro */
   }
@@ -232,6 +265,7 @@ text-decoration: none; /* Remove o sublinhado padrão */
 }
 
 a {
+cursor: none;
 background-color: black;
 text-decoration: none;
 color: white;
@@ -240,105 +274,3 @@ border-radius: 10px;
 text-align: center;
 }
 
-
-@media screen and (min-width: 550px) and (max-width: 550px) {
-.window {
-  width: 400px;
-  background-color: #f8f8f8; /* Cor de fundo do estilo Windows XP */
-  border: 1px solid #c0c0c0; /* Cor da borda do estilo Windows XP */
-  border-radius: 5px;
-  box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
-  align-items: center;
-  justify-content: center;
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
- 
-}
-}
-.title-bar {
-  background-color: #842547; /* Cor de fundo da barra de título do estilo Windows XP */
-  color: white;
-  padding: 10px;
-    background-image: linear-gradient(to bottom right, rgba(255,0,0,0), rgb(204, 86, 125));
-  display: flex;
-  justify-content: space-between;
-}
-
-.buttons {
-  display: flex;
-}
-
-.buttons div {
-  width: 20px;
-  height: 20px;
- 
-  margin-right: 5px;
-}
-
-.close-button {
-  background-color: #840390; /* Cor do botão de fechar do estilo Windows XP */
-  border: outset;
-}
-
-.minimize-button {
-  background-color: #a80a5c; /* Cor do botão de minimizar do estilo Windows XP */
-  border: outset;
-}
-
-.content {
-  padding: 20px;
-  max-height: 300px; /* Altura máxima do conteúdo */
-  overflow-y: auto;
-}
-
-.search-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  background-color: #e4e4e4; /* Cor de fundo da barra de pesquisa */
-  border: 1px solid #c0c0c0; /* Cor da borda da barra de pesquisa */
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-input[type="text"] {
-  width: calc(100% - 40px);
-  padding: 8px;
-  font-size: 16px;
-  border: none;
-  background-color: #e4e4e4; /* Cor de fundo do campo de pesquisa */
-  outline: none;
-}
-
-.search-icon {
-  width: 40px;
-  height: 100%;
-  background-image: url('search-icon.png');
-  background-size: 18px;
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-}
-
-button {
-  display: none; /* Escondendo o botão de pesquisa */
-}
-
-#resultado {
-  margin-top: 20px;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-/* Estilos adicionais para imitar o visual do Google antigo no Windows XP */
-h2 {
-  font-size: 18px;
-  color: #1a0dab; /* Cor do título do Google */
-  margin-bottom: 10px;
-}
-
-p #site {
-  color: #545454; /* Cor do texto do Google */
-}
