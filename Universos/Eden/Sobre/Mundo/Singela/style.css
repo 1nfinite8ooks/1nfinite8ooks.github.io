@@ -98,7 +98,6 @@ main img {
 .category h3 {
   cursor: none;
   position: relative;
-  cursor: pointer;
   margin: 0;
   padding: 10px;
   background-color: black;
@@ -135,6 +134,7 @@ text-decoration: none; /* Remove o sublinhado padrão */
 }
 /* Centralizar conteúdo */
 .category-content {
+  cursor: none;
   padding-left: 20px; /* Adiciona um recuo para manter o conteúdo alinhado à esquerda */
 }
 
