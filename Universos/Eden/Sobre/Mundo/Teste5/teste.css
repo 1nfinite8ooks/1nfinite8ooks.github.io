@@ -160,7 +160,9 @@ background-color: #f0f0f0;
 white-space: nowrap; /* Impede que os links quebrem para a próxima linha */
 overflow-x: auto; /* Adiciona uma barra de rolagem horizontal se os links forem muito largos */
 }
-
+#coisas{
+  position: relative;
+}
 .category-content p a {
 display: inline-block; /* Permite que os links se comportem como blocos inline */
 margin-right: 5px; /* Adiciona um espaço entre os links */
