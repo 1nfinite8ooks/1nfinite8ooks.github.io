@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="teste.css">
 </head>
 <body>
+  <div id="cursor"></div>
+  <audio id="click-sound" src="mixkit-arcade-game-jump-coin-216.wav"></audio>
     <header>
         <header>
             <img src="Eden logo.png" alt="">
@@ -27,13 +29,13 @@
         para dar uma olhadinha aos jornais novos que virão</p>
         <h2 id="countdown">Novo jornal em: 24:00:00</h2>
             <h3 id="message">Já lido.</h3>
-        <img class="newspaper-image" id="newspaper1" src="1.png">
-        <img class="newspaper-image" id="newspaper2" src="2.png">
-        <img class="newspaper-image" id="newspaper3" src="3.png">
-        <img class="newspaper-image" id="newspaper4" src="4.png">
+        <img class="newspaper-image" id="newspaper1" src="1J.png">
+        <img class="newspaper-image" id="newspaper2" src="2J.png">
+        <img class="newspaper-image" id="newspaper3" src="3J.png">
+        <img class="newspaper-image" id="newspaper4" src="4J.png">
                 <script>
                   document.addEventListener('DOMContentLoaded', function() {
-                  var newspapers = ['1.png', '2.png', '3.png', '4.png'];
+                  var newspapers = ['1J.png', '2J.png', '3J.png', '4J.png'];
                   var currentIndex = 0;
                 var countdownInterval;
 
@@ -128,6 +130,46 @@
     // Inicia o cronômetro
     updateCountdown();
   });
+  const cursor = document.getElementById('cursor');
+           const clickSound = document.getElementById('click-sound');
+   
+           document.addEventListener('mousemove', e => {
+               cursor.style.left = `${e.clientX}px`;
+               cursor.style.top = `${e.clientY}px`;
+           });
+   
+           document.addEventListener('mousedown', () => {
+               let frames = ['2.png', '3.png', '4.png', '5.png', '6.png'];
+               let i = 0;
+   
+               function animateClick() {
+                   if (i < frames.length) {
+                       cursor.style.backgroundImage = `url('${frames[i]}')`;
+                       i++;
+                       setTimeout(animateClick, 50); // Controla a velocidade da animação
+                   } else {
+                       cursor.style.backgroundImage = `url('1.png')`; // Retorna à imagem padrão
+                   }
+               }
+   
+               animateClick();
+               clickSound.play(); // Toca o som ao clicar
+           });
+   
+           document.addEventListener('mouseup', () => {
+            cursor.style.backgroundImage = `url('1.png')`; // Retorna à imagem padrão
+        });
+
+        // Manipulação do cursor quando entra e sai do elemento
+        pointerTarget.addEventListener('mouseenter', () => {
+            cursor.style.backgroundImage = 'url("7.png")'; // Imagem da mão apontando
+            document.body.style.cursor = 'pointer'; // Define o cursor padrão como pointer
+        });
+
+        pointerTarget.addEventListener('mouseleave', () => {
+            cursor.style.backgroundImage = 'url("1.png")'; // Retorna à imagem padrão
+            document.body.style.cursor = 'none'; 
+        });// Esconde o cursor padrão
                 </script>
                 
 
