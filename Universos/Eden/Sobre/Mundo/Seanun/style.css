@@ -1,19 +1,37 @@
 body {
+  cursor: none; /* Esconde o cursor padrão */
   text-align: center;
   background-color: black;
   font-size: 20px;
 }
+
 header{
+cursor: none;
 background-color: black;
 font-family: 'Times New Roman', Times, serif; 
 padding: 10px;
 margin: auto;
 }
 main > a {
+  cursor: none;
   background-color: black;
 
 }
+#cursor {
+  cursor:none;
+  position: absolute;
+  width: 64px; /* Ajuste conforme necessário */
+  height: 64px; /* Ajuste conforme necessário */
+  pointer-events: none; /* Faz com que o cursor não interfira com cliques */
+  background-image: url('1.png'); /* Imagem da mão parada */
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: fixed; /* Alterado para fixed para seguir o scroll */
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
 nav > a {
+cursor:none;
 text-decoration: none;
 color: white;
 font-weight: bold;
@@ -21,7 +39,9 @@ padding: 5px;
 margin-right: 20px;
 display: inline-flex; /* Altera o comportamento padrão para que os links fiquem em linha */
 }
-
+#coisas {
+  position: relative;
+}
 /* Estilos para telas pequenas usando media query */
 @media screen and (max-width: 600px) {
 nav {
@@ -34,6 +54,7 @@ display: flex;
 }
 }
 main {
+  cursor:none;
   align-items: center;
   background-color: white;
   width: 1200px;
@@ -48,6 +69,7 @@ main {
   }
 }
 main img {
+  cursor:none;
   max-width: 100%;
   height: auto; }
 /* Estilos para telas médias (entre 450px e 1200px) */
@@ -59,15 +81,17 @@ main img {
   }
 }
 .catalog {
+  cursor:none;
   margin: 20px auto;
   width: 80%;
   max-width: 600px;
 }
 .category {
+  cursor:none;
   margin-bottom: 10px;
 }
 .category h3 {
-  cursor: pointer;
+  cursor:none;
   margin: 0;
   padding: 10px;
   background-color: black;
