@@ -1,17 +1,33 @@
 body {
+  cursor: none; /* Esconde o cursor padrão */
   text-align: center;
   background-color: black;
   font-size: 20px;
 }
+
 header{
+cursor: none;
 background-color: black;
 font-family: 'Times New Roman', Times, serif; 
 padding: 10px;
 margin: auto;
 }
 main > a {
+  cursor: none;
   background-color: black;
 
+}
+#cursor {
+  cursor:none;
+  position: absolute;
+  width: 64px; /* Ajuste conforme necessário */
+  height: 64px; /* Ajuste conforme necessário */
+  pointer-events: none; /* Faz com que o cursor não interfira com cliques */
+  background-image: url('1.png'); /* Imagem da mão parada */
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: fixed; /* Alterado para fixed para seguir o scroll */
+  transform: translate(-50%, -50%);
 }
 nav > a {
 text-decoration: none;
@@ -28,12 +44,19 @@ nav {
 text-align: center;
 }
 nav > a {
+cursor: none;
 margin-right: 80px; /* Reduz o espaço entre os links */
 font-size: 20px; /* Ajusta o tamanho da fonte para torná-la mais legível */
 display: flex;
 }
 }
+#coisas {
+  cursor: none;
+  position: relative;
+}
 main {
+  cursor: none;
+  position: relative;
   align-items: center;
   background-color: white;
   width: 1200px;
@@ -48,6 +71,8 @@ main {
   }
 }
 main img {
+  cursor: none;
+  position: relative;
   max-width: 100%;
   height: auto; }
 /* Estilos para telas médias (entre 450px e 1200px) */
@@ -59,14 +84,20 @@ main img {
   }
 }
 .catalog {
+  cursor: none;
+  position: relative;
   margin: 20px auto;
   width: 80%;
   max-width: 600px;
 }
 .category {
+  cursor: none;
+  position: relative;
   margin-bottom: 10px;
 }
 .category h3 {
+  cursor: none;
+  position: relative;
   cursor: pointer;
   margin: 0;
   padding: 10px;
@@ -106,6 +137,8 @@ text-decoration: none; /* Remove o sublinhado padrão */
 }
 
 a {
+cursor: none;
+position: relative;
 background-color: black;
 text-decoration: none;
 color: white;

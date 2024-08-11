@@ -4,26 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon2.ico" type="image/x-icon">
     <title>Singela</title>
  
 </head>
 <body>
-     
+    <div id="cursor"></div>
+    <audio id="click-sound" src="mixkit-arcade-game-jump-coin-216.wav"></audio>
         <header>
             <header>
                 <img src="Eden logo.png" alt="">
                 <nav>
-            <a href="Sobre/Sobre.html">✦ Sobre</a>
-            <a href="Comics/Comics.html">✦ Comics</a>
-            <a href="Jogos/Jogos.html">✦ Jogos</a> 
-            <a href="Mundo/Mundo.html">✦ Mundo</a>
-            <a href="Personagens/Personagens">✦ Personagens</a>
-            <a href="Galeria/Galeria.html">✦ Galeria</a>
-            </nav>
+                    <a href="https://1nfinite8ooks.github.io/Menu/Universos/Eden/Sobre/Sobre.html">✦ Sobre</a>
+                    <a href="https://1nfinite8ooks.github.io/Menu/Universos/Eden/Sobre/Comics/Comics.html">✦ Comics</a>
+                    <a href="https://1nfinite8ooks.github.io/Menu/Universos/Eden/Sobre/Jogos/Jogos.html">✦ Jogos</a> 
+                    <a href="https://1nfinite8ooks.github.io/Menu/Universos/Eden/Sobre/Mundo/Mundo.html">✦ Mundo</a>
+                    <a href="https://1nfinite8ooks.github.io/Menu/Universos/Eden/Sobre/Personagens/Personagens.html">✦ Personagens</a>
+                    <a href="https://1nfinite8ooks.github.io/Menu/Universos/Eden/Sobre/Galeria/Galeria.html">✦ Galeria</a>
+                    </nav>
         </header>
         <main>
             <section>
-              <article>
+              <article id="coisas">
                   <h1><img src="Amaldrictext.png" alt=""></h1>
               </article>
               <article>
@@ -60,7 +62,7 @@
               <div class="category">
                   <h3>⚑ Bandeira</h3>
                   <div class="category-content">
-                      <img src="#" alt="" srcset="">
+                      <img src="Singela.png" alt="" srcset="">
                   </div>
               </div>
               </div>
@@ -81,6 +83,46 @@
             }
               });
             });
+            const cursor = document.getElementById('cursor');
+           const clickSound = document.getElementById('click-sound');
+   
+           document.addEventListener('mousemove', e => {
+               cursor.style.left = `${e.clientX}px`;
+               cursor.style.top = `${e.clientY}px`;
+           });
+   
+           document.addEventListener('mousedown', () => {
+               let frames = ['2.png', '3.png', '4.png', '5.png', '6.png'];
+               let i = 0;
+   
+               function animateClick() {
+                   if (i < frames.length) {
+                       cursor.style.backgroundImage = `url('${frames[i]}')`;
+                       i++;
+                       setTimeout(animateClick, 50); // Controla a velocidade da animação
+                   } else {
+                       cursor.style.backgroundImage = `url('1.png')`; // Retorna à imagem padrão
+                   }
+               }
+   
+               animateClick();
+               clickSound.play(); // Toca o som ao clicar
+           });
+   
+           document.addEventListener('mouseup', () => {
+            cursor.style.backgroundImage = `url('1.png')`; // Retorna à imagem padrão
+        });
+
+        // Manipulação do cursor quando entra e sai do elemento
+        pointerTarget.addEventListener('mouseenter', () => {
+            cursor.style.backgroundImage = 'url("7.png")'; // Imagem da mão apontando
+            document.body.style.cursor = 'pointer'; // Define o cursor padrão como pointer
+        });
+
+        pointerTarget.addEventListener('mouseleave', () => {
+            cursor.style.backgroundImage = 'url("1.png")'; // Retorna à imagem padrão
+            document.body.style.cursor = 'none'; 
+        });// Esconde o cursor padrão
               </script>
               </article>
               <p>Copyright © 2024 1nfinite8ooks. All rights reserved.</p>
