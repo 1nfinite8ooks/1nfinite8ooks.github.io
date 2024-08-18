@@ -592,6 +592,28 @@ cursor: none;
 cursor: none;
 visibility: visible;
 }
+.aviso {
+    cursor: none;
+    position: relative;
+    display: inline-block;
+    }
+    .aviso .avisoinfo {
+    cursor: none;
+        visibility: hidden;
+            width: 300px;
+            background-color: rgb(240, 2, 2);
+            color: #ffffff;
+    
+            text-align: center;
+            border-style: solid; color:rgb(255, 255, 255);
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+    }
+    .aviso:hover .avisoinfo {
+    cursor: none;
+        visibility: visible;
+    }
 #nome {
     font-size: 60;   
 }
