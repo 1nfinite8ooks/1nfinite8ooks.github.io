@@ -592,14 +592,14 @@ cursor: none;
 cursor: none;
 visibility: visible;
 }
-.outrem {
+.ou {
     cursor: none;
     position: relative;
     display: inline-block;
     }
   .ou .ouinfo {
-    cursor: none;
-        visibility: hidden;
+            cursor: none;
+            visibility: hidden;
             width: 300px;
             background-color: rgb(143, 88, 255);
             color: #ffffff;
