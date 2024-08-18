@@ -597,7 +597,7 @@ visibility: visible;
     position: relative;
     display: inline-block;
     }
-    .outrem .outreminfo {
+  .ou .ouinfo {
     cursor: none;
         visibility: hidden;
             width: 300px;
@@ -610,8 +610,8 @@ visibility: visible;
             position: absolute;
             z-index: 1;
     }
-    .outrem:hover .outreminfo {
-    cursor: none;
+    .ou:hover .ouinfo {
+        cursor: none;
         visibility: visible;
     }
 .aviso {
