@@ -104,7 +104,7 @@ main img {
 .category-content p {
 margin: 0;
 padding: 5px;
-background-color: #f0f0f0;
+background-color: #ffffff;
 white-space: nowrap; /* Impede que os links quebrem para a próxima linha */
 overflow-x: auto; /* Adiciona uma barra de rolagem horizontal se os links forem muito largos */
 }
@@ -123,7 +123,11 @@ text-decoration: none; /* Remove o sublinhado padrão */
 .category-content {
     padding-left: 20px; /* Adiciona um recuo para manter o conteúdo alinhado à esquerda */
 }
-
+#a2{
+  background-color: white;
+  color: black;
+  text-decoration: underline;
+}
 a {
 background-color: black;
 text-decoration: none;
