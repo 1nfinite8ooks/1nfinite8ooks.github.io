@@ -127,6 +127,7 @@ text-decoration: none; /* Remove o sublinhado padrão */
   background-color: white;
   color: black;
   text-decoration: underline;
+  cursor: none;
 }
 a {
 background-color: black;
