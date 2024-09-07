@@ -451,6 +451,30 @@ cursor: none;
     visibility: visible;
 }
 
+.de {
+    cursor: none;
+        position: relative;
+        display: inline-block;
+    }
+    
+.deinfo{
+    cursor: none;
+        visibility: hidden;
+        width: 300px;
+        background-color: rgb(75, 75, 75);
+        color: #000000;
+        text-align: center;
+        border-style: solid; color:rgb(0, 0, 0);
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+    }
+    
+ .de:hover .deinfo {
+    cursor: none;
+        visibility: visible;
+    }
+
 .mag {
 cursor: none;
     position: relative;
@@ -614,6 +638,29 @@ visibility: visible;
         cursor: none;
         visibility: visible;
     }
+
+.aviso2 {
+        cursor: none;
+        position: relative;
+        display: inline-block;
+        }
+    .aviso2 .aviso2info {
+            cursor: none;
+            visibility: hidden;
+                width: 300px;
+                background-color: rgb(255, 162, 0);
+                color: #ffffff;
+                text-align: center;
+                border-style: solid; color:rgb(255, 255, 255);
+                padding: 5px 0;
+                position: absolute;
+                z-index: 1;
+        }
+    .aviso2:hover .aviso2info {
+        cursor: none;
+            visibility: visible;
+        }
+
 .aviso {
     cursor: none;
     position: relative;
@@ -623,7 +670,7 @@ visibility: visible;
     cursor: none;
         visibility: hidden;
             width: 300px;
-            background-color: rgb(240, 2, 2);
+            background-color: rgb(189, 0, 0);
             color: #ffffff;
     
             text-align: center;
@@ -636,6 +683,8 @@ visibility: visible;
     cursor: none;
         visibility: visible;
     }
+
+
 #nome {
     font-size: 60;   
 }
