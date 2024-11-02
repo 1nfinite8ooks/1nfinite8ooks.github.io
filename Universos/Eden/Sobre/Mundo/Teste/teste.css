@@ -1,43 +1,25 @@
 body {
-  cursor: none; /* Esconde o cursor padrão */
   text-align: center;
   background-color: black;
   font-size: 20px;
 }
-
 header{
-cursor: none;
 background-color: black;
 font-family: 'Times New Roman', Times, serif; 
 padding: 10px;
 margin: auto;
 }
 main > a {
-  cursor: none;
   background-color: black;
 
 }
-
 nav > a {
   text-decoration: none;
   color: white;
   font-weight: bold;
   padding: 5px;
   margin-right: 20px;
-  display: inline-flex; /* Altera o comportamento padrão para que os links fiquem em linha */
-  }
-  
-  /* Estilos para telas pequenas usando media query */
-  @media screen and (max-width: 600px) {
-  nav {
-  text-align: center;
-  }
-  nav > a {
-  cursor: none;
-  margin-right: 80px; /* Reduz o espaço entre os links */
-  font-size: 20px; /* Ajusta o tamanho da fonte para torná-la mais legível */
-  display: flex;
-  }
+}
 
 main {
   position: relative;
@@ -234,4 +216,16 @@ h2 {
 p #site {
   color: #545454; /* Cor do texto do Google */
 }
+/* Media Query para telas menores */
+@media screen and (max-width: 1199px) {
+  main >img {
+      background-color: white; /* Fundo branco */
+      width: 1200px; 
   }
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+      opacity: 1; /* Garante que a opacidade esteja em 1 quando em tela cheia */
+  }
+}
