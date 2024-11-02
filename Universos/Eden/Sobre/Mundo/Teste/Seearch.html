@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seearch</title>
+    <link rel="stylesheet" href="teste.css">
+</head>
+<body>
+    <header>
+        <header>
+            <img src="Eden logo.png" alt="">
+            <nav>
+                <a href="Sobre.html">✦ Sobre</a>
+                <a href="Comics.html">✦ Comics</a>
+                <a href="Jogos.html">✦ Jogos</a> 
+                <a href="Mundo.html">✦ Mundo</a>
+                <a href="Personagens.html">✦ Personagens</a>
+                <a href="Galeria.html">✦ Galeria</a>
+        </nav>
+    </header>
+    <main>
+        
+        <div class="window" style="border: inset; background-color: white;  transform: translateY(-250px);  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)/* Move 20 pixels para cima */">
+            <div class="title-bar">
+                <p style="display: contents;">Seearch</p>
+                <div class="buttons">
+                    <div class="close-button">
+                    <p style="display: contents;">X</p>
+                    </div>
+                    <div class="minimize-button">
+                    <p style="display: contents;"><b>−</b></p>
+                    </div>
+    
+                </div>
+            </div>
+            <div class="content">
+            <p><img src="Seearch.png" alt="" srcset="">
+            </p>
+                <div class="search-container">
+                    <input type="text" id="text" autocomplete="new-password" spellcheck="false" autocomplete="off" autocapitalize="none" placeholder="Digite aqui...">
+                    <div class="search-icon" onclick="pesquisar()"></div>
+                </div>
+                <div id="resultado"></div>
+            </div>
+        </div>
+     <script>
+        document.getElementById('text').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        pesquisar();
+    }
+});
+
+function pesquisar() {
+    var input = document.getElementById('text').value.toString();
+    var resultado = document.getElementById('resultado');
+    if (input === 'dipueb.com') {
+            window.open('Dipueb.html', '_self');
+            return; }
+     switch (input) {
+        case 'Amour d Fraise':
+            resultado.innerHTML = `
+                <p><img src="Amourd_Fraice.png" alt="" srcset=""></p>
+                <h2>A doceria com os bolos mais deliciosos deste mundo!</h2>
+                <p class="site">Nós da Amour d' Fraise®  desde os anos 1960, 
+                    <br>fazemos bolos artesanais deliciosos para todos os tipos
+                    <br> de ocasiões especiais, ou apenas para degustar!</p>
+                <p class="site">
+                    Aqui você pode ver nosso catalogo de bolos com diversos<br>sabores diferentes! tanto para pedir e tanto para encomendar!
+                    </p>
+                <p class="site">Veja nossos pratos mais desejados!</p>
+                <p class="site">Ligue para 886-942 para encomenda e pedidos especiais!
+                <p class="site">Localização: Rua das Delícias, nº 123, Cidade dos Doces</p>
+            `;
+            break;
+        case 'Milk Momoo':
+            resultado.innerHTML = `
+                <p class="site"><img src="MilkMoMoo.png" alt="" srcset=""></p>
+                <h2 style="color:rgb(226, 59, 59);">Milk Momoo a maior empresa de achocolatados e nutrição</h2>
+                <p class="site">
+                    Nossa empresa Milk Momoo® tem os melhores<br>
+                    achocolatados para toda a familia e todas<br>
+                    as idades! Trazendo nutrição, energia, e alegria!
+                    </p>
+                <p class="site">
+                    Somos a maior empresa e indústria que produz:<br> 
+                    leites, achocolatados, cereais, biscoitos, culinários,<br> 
+                    achocolatados, sorvetes, chocolates e entre muuuitos outros.
+                </p>
+                <p class="site">
+                    Nós temos muuuuuitos produtos saborosos<br>
+                    e deliciosos para degustar, que iram<br>
+                    melhorar o seu dia o seu dia!<br>
+                    </p>
+                <h2 style="color:rgb(226, 59, 59);">Alguns de nossos produtos!</h2>
+                <p class="site"><img src="Momoo1.png" alt="" srcset=""></p>
+                <p class="site"><img src="Momoo2.png" alt="" srcset=""></p>
+                <p class="site"><img src="Momoo3.png" alt="" srcset=""></p>
+                <h2 style="color:rgb(226, 59, 59);">Visite o nosso Café Momoo!</h2>
+                 <p class="site">
+                <p class="site"><img src="Momooheader.png" alt="" srcset=""></p>
+                    Visite nosso café com um cardápio repleto<br>
+                    de pratos especiais feitos exclusivamente para você!<br>
+                    Experimente nossas delícias e sensações feitas<br>
+                    com amooor e carinho!
+                 </p>
+                 <h2 style="color:rgb(226, 59, 59);">Venha pegar uma Momoozinha de lembrancinha!</h2>
+                 <p class="site">Localização: Avenida do Cacau, nº 456, Cidade do Chocolate</p>
+                 <p class="site">© 1960 MilkMoMoo. All Rigths Reserved</p>
+                
+            `;
+            break;
+        case 'vanille':
+            resultado.innerHTML = `
+                <h2>Villa Vanille</h2>
+                <p class="site">Bem-vindo à Villa Vanille, onde a baunilha é a estrela de cada prato. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ipsum dolorem quisquam culpa. Tenetur minus praesentium magnam, laudantium porro repellat aliquid eum similique dolor temporibus illo illum perferendis eaque pariatur.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ipsum dolorem quisquam culpa. Tenetur minus praesentium magnam, laudantium porro repellat aliquid eum similique dolor temporibus illo illum perferendis eaque pariatur.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ipsum dolorem quisquam culpa. Tenetur minus praesentium magnam, laudantium porro repellat aliquid eum similique dolor temporibus illo illum perferendis eaque pariatur.</p>
+                <p class="site">Descubra nossas delícias aromáticas que vão deixar você com água na boca.</p>
+                <p class="site">Localização: Praça da Baunilha, nº 789, Cidade Perfumada</p>
+            `;
+            break;
+        default:
+            resultado.innerHTML = 'Palavra-chave não encontrada.';
+            break;
+    }
+}
+     </script>     
+      
+    </main>
+</body>
+</html>
