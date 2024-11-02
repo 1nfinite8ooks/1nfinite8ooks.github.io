@@ -48,7 +48,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('Pc\ \(2\).png'); /* Caminho da imagem */
+  background-image: url('Pc2.png'); /* Caminho da imagem */
  /* Redimensiona a imagem para caber inteira */
   background-position: center; /* Centraliza a imagem */
   background-repeat: no-repeat;
