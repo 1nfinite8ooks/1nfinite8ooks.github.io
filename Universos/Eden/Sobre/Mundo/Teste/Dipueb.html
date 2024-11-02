@@ -5,25 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dipueb</title>
     <link rel="stylesheet" href="dipuebi.css">
-    <link rel="shortcut icon" href="favicon2.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <header>
             <img src="Eden logo.png" alt="">
             <nav>
-                <a href="https://1nfinite8ooks.github.io/Universos/Eden/Sobre/Sobre.html">✦ Sobre</a>
-                <a href="https://1nfinite8ooks.github.io/Universos/Eden/Sobre/Comics/Comics.html">✦ Comics</a>
-                <a href="https://1nfinite8ooks.github.io/Universos/Eden/Sobre/Jogos/Jogos.html">✦ Jogos</a> 
-                <a href="https://1nfinite8ooks.github.io/Universos/Eden/Sobre/Mundo/Mundo.html">✦ Mundo</a>
-                <a href="https://1nfinite8ooks.github.io/Universos/Eden/Sobre/Personagens/Personagens.html">✦ Personagens</a>
-                <a href="https://1nfinite8ooks.github.io/Universos/Eden/Sobre/Galeria/Galeria.html">✦ Galeria</a>
-                </nav>
+                <a href="https://1nfinite8ooks.github.io/Menu/Universos/Eden/Sobre/Sobre.html#">✦ Sobre</a>
+                <a href="https://1nfinite8ooks.github.io/Menu/Universos/Eden/Sobre/Comics/Comics.html">✦ Comics</a>
+                <a href="Jogos.html">✦ Jogos</a> 
+                <a href="Mundo.html">✦ Mundo</a>
+                <a href="Personagens.html">✦ Personagens</a>
+                <a href="Galeria.html">✦ Galeria</a>
+        </nav>
     </header>
     <main>
-      
-        <h1>Bem vindo</h1>
-        <div class="window" style="border: inset;">
+        <div class="window" style="border: inset; background-color: rgb(0, 0, 0);  transform: translateY(-250px);  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)/* Move 20 pixels para cima */">
             <div class="title-bar">
                 <p style="display: contents;">Seearch</p>
                 <div class="buttons">
@@ -40,22 +37,21 @@
             <p><img src="Dipueb.png" alt="" srcset="">
             </p>
                 <div class="search-container">
-                    <input type="text" id="text" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" placeholder="Digite aqui...">
+                    <input type="text" id="search-input" placeholder="Digite aqui...">
                     <div class="search-icon" onclick="pesquisar()"></div>
                 </div>
                 <div id="resultado"></div>
             </div>
         </div>
-        <img src="Pc (1).png" alt="" srcset="">
      <script>
-        document.getElementById('text').addEventListener('keypress', function (e) {
+        document.getElementById('search-input').addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
         pesquisar();
     }
 });
 
 function pesquisar() {
-    var input = document.getElementById('text').value.toLowerCase();
+    var input = document.getElementById('search-input').value.toLowerCase();
     var resultado = document.getElementById('resultado');
     if (input === 'seearch.com') {
             window.open('Seearch.html', '_self');
@@ -87,12 +83,11 @@ function pesquisar() {
             `;
             break;
         default:
-            resultado.innerHTML = 'Pesquisa não encontrada.';
+            resultado.innerHTML = 'Palavra-chave não encontrada.';
             break;
     }
 }
      </script>     
-      <p>Copyright © 2024 1nfinite8ooks. All rights reserved.</p>
     </main>
 </body>
 </html>

@@ -14,33 +14,29 @@ main > a {
 
 }
 nav > a {
-text-decoration: none;
-color: white;
-font-weight: bold;
-padding: 5px;
-margin-right: 20px;
-display: inline-flex; /* Altera o comportamento padrão para que os links fiquem em linha */
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  margin-right: 20px;
 }
 
-/* Estilos para telas pequenas usando media query */
-@media screen and (max-width: 600px) {
-nav {
-text-align: center;
-}
-nav > a {
-margin-right: 80px; /* Reduz o espaço entre os links */
-font-size: 20px; /* Ajusta o tamanho da fonte para torná-la mais legível */
-display: flex;
-}
-}
 main {
-  align-items: center;
+  position: relative;
   background-color: white;
   width: 1200px;
-  padding: 10px;
-  margin: auto;
-  border-radius: 20px;
+  width: 100%;
+  height: 1400px; /* Ocupa a altura da tela */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('Pc\ \(2\).png'); /* Caminho da imagem */
+ /* Redimensiona a imagem para caber inteira */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat;
+   /* Remove overflow dentro de main */
 }
+
 @media screen and (max-width: 500px) {
   main {
     width: 450px;
@@ -117,6 +113,7 @@ text-align: center;
 
 @media screen and (min-width: 550px) and (max-width: 550px) {
 .window {
+  position: relative;
   width: 400px;
   background-color: #f8f8f8; /* Cor de fundo do estilo Windows XP */
   border: 1px solid #c0c0c0; /* Cor da borda do estilo Windows XP */
@@ -127,12 +124,15 @@ text-align: center;
   display: inline-block;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100px;
+  z-index: 1;
+  
+
  
 }
 }
 .title-bar {
-  background-color: #842547; /* Cor de fundo da barra de título do estilo Windows XP */
+  background-color: #8d19a7; /* Cor de fundo da barra de título do estilo Windows XP */
   color: white;
   padding: 10px;
     background-image: linear-gradient(to bottom right, rgba(255,0,0,0), rgb(204, 86, 125));
@@ -152,12 +152,12 @@ text-align: center;
 }
 
 .close-button {
-  background-color: #840390; /* Cor do botão de fechar do estilo Windows XP */
+  background-color: #7b0086; /* Cor do botão de fechar do estilo Windows XP */
   border: outset;
 }
 
 .minimize-button {
-  background-color: #a80a5c; /* Cor do botão de minimizar do estilo Windows XP */
+  background-color: #a8008f; /* Cor do botão de minimizar do estilo Windows XP */
   border: outset;
 }
 
@@ -165,15 +165,14 @@ text-align: center;
   padding: 20px;
   max-height: 300px; /* Altura máxima do conteúdo */
   overflow-y: auto;
-  background-color: black;
 }
 
 .search-container {
   position: relative;
   display: flex;
   align-items: center;
-  background-color: #333333; /* Cor de fundo da barra de pesquisa */
-  border: 1px solid #222222; /* Cor da borda da barra de pesquisa */
+  background-color: #e4e4e4; /* Cor de fundo da barra de pesquisa */
+  border: 1px solid #c0c0c0; /* Cor da borda da barra de pesquisa */
   border-radius: 3px;
   overflow: hidden;
 }
@@ -183,8 +182,7 @@ input[type="text"] {
   padding: 8px;
   font-size: 16px;
   border: none;
-  color: #ffffff;
-  background-color: #333333; /* Cor de fundo do campo de pesquisa */
+  background-color: #e4e4e4; /* Cor de fundo do campo de pesquisa */
   outline: none;
 }
 
@@ -195,29 +193,39 @@ input[type="text"] {
   background-size: 18px;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #333333;
   cursor: pointer;
 }
 
 button {
   display: none; /* Escondendo o botão de pesquisa */
-  background-color: #333333;
 }
 
 #resultado {
   margin-top: 20px;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.6;
-  color: white;
 }
 
 /* Estilos adicionais para imitar o visual do Google antigo no Windows XP */
 h2 {
-  font-size: 18px;
-  color: #ab0d0d; /* Cor do título do Google */
+  font-size: 20px;
+  color: #1a0dab; /* Cor do título do Google */
   margin-bottom: 10px;
 }
 
 p #site {
-  color: #ffffff; /* Cor do texto do Google */
+  color: #545454; /* Cor do texto do Google */
+}
+/* Media Query para telas menores */
+@media screen and (max-width: 1199px) {
+  main >img {
+      background-color: white; /* Fundo branco */
+      width: 1200px; 
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+      opacity: 1; /* Garante que a opacidade esteja em 1 quando em tela cheia */
+  }
 }
