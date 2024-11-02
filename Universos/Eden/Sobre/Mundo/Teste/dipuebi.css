@@ -144,10 +144,8 @@ text-align: center;
   align-items: center;
   height: 100px;
   z-index: 1;
-  
-
- 
 }
+
 }
 .title-bar {
   background-color: #8d19a7; /* Cor de fundo da barra de título do estilo Windows XP */
@@ -233,6 +231,19 @@ h2 {
 
 p #site {
   color: #545454; /* Cor do texto do Google */
+}
+/* Media Query para telas menores */
+@media screen and (max-width: 1199px) {
+  main >img {
+      background-color: white; /* Fundo branco */
+      width: 1200px; 
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+      opacity: 1; /* Garante que a opacidade esteja em 1 quando em tela cheia */
+  }
 }
 /* Media Query para telas menores */
 @media screen and (max-width: 1199px) {
