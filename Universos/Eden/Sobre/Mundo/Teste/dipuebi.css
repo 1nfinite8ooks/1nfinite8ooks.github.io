@@ -227,7 +227,7 @@ h2 {
 }
 
 p #site {
-  color: #545454; /* Cor do texto do Google */
+  color: #ffffff; /* Cor do texto do Google */
 }
 /* Media Query para telas menores */
 @media screen and (max-width: 1199px) {
