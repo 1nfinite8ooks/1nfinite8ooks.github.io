@@ -13,6 +13,7 @@ main > a {
   background-color: black;
 
 }
+
 nav > a {
   text-decoration: none;
   color: white;
@@ -34,7 +35,6 @@ nav > a {
   display: flex;
   }
   }
-
 main {
   position: relative;
   background-color: white;
