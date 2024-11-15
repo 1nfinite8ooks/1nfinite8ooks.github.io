@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon2.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        .
+    </header>
+    <main>
+      <div class="container">
+      
+        <div id="quiz-container">
+            <div id="question-container">
+                <div id="question-text" class="question"></div>
+                <div id="options-container" class="options-container"></div>
+                <div class="progress-bar">
+                    <div id="progress-bar-fill" class="progress-bar-fill"></div>
+                </div>
+            </div>
+            <div class="buttons-container">
+                <button id="previous-button" disabled>Anterior</button>
+                <button id="next-button" disabled>Próximo</button>
+            </div>
+        </div>
+        <div id="result" class="result"></div>
+    </div>
+    
+    <script>
+       const questions = [
+                { text: "Sente que prefere agir com audácia, mesmo que haja riscos?", personality: ["Flamma"], opposite: ["Serenus"] },
+                { text: "Valoriza a tranquilidade e sente-se confortável com a estabilidade em sua vida?", personality: ["Terrae"], opposite: ["Solaris"] },
+                { text: "Costuma buscar soluções práticas ao invés de teorias complexas?", personality: ["Natura"], opposite: ["Lunaris"] },
+                { text: "Tende a ser mais racional do que emocional ao tomar decisões?", personality: ["Petrus"], opposite: ["Flamma"] },
+                { text: "Gosta de explorar novos horizontes, sempre buscando desafios e aventuras?", personality: ["Entia"], opposite: ["Serenus"] },
+                { text: "Sente uma forte necessidade de controlar as situações ao seu redor?", personality: ["Crystallus"], opposite: ["Solaris"] },
+                { text: "Em momentos de estresse, tende a buscar o conforto em sua própria companhia?", personality: ["Serenus"], opposite: ["Entia"] },
+                { text: "Tem facilidade para se adaptar rapidamente a novos ambientes?", personality: ["Solaris"], opposite: ["Lunaris"] },
+                { text: "Valoriza muito a lógica e a organização em sua rotina diária?", personality: ["Lunaris"], opposite: ["Entia"] },
+                { text: "Prefere ser independente e tomar suas próprias decisões, sem depender dos outros?", personality: ["Fulmen"], opposite: ["Aqua"] },
+                { text: "Gosta de fazer planos detalhados antes de agir em qualquer situação?", personality: ["Petrus"], opposite: ["Flamma"] },
+                { text: "Sente uma forte conexão com a natureza e a simplicidade da vida?", personality: ["Natura"], opposite: ["Solaris"] },
+                { text: "Acredita que sua maior força é sua habilidade em liderar os outros?", personality: ["Flamma"], opposite: ["Serenus"] },
+                { text: "Busca sempre manter a paz, evitando conflitos e desentendimentos?", personality: ["Serenus"], opposite: ["Fulmen"] },
+                { text: "Prefere pensar antes de agir, avaliando todas as consequências possíveis?", personality: ["Crystallus"], opposite: ["Flamma"] },
+                { text: "Gosta de aprender constantemente e se desafiar intelectualmente?", personality: ["Fulmen"], opposite: ["Natura"] },
+                { text: "Costuma agir impulsivamente, sem pensar muito nas consequências?", personality: ["Flamma"], opposite: ["Petrus"] },
+                { text: "É mais reservado e introvertido, preferindo passar tempo sozinho em vez de socializar?", personality: ["Lunaris"], opposite: ["Solaris"] },
+                { text: "Sente-se confortável com a rotina e com ambientes conhecidos?", personality: ["Terrae"], opposite: ["Entia"] },
+                { text: "Acredita que o futuro é mais importante que o presente?", personality: ["Solaris"], opposite: ["Natura"] },
+                { text: "Costuma ser mais idealista e sonhador, buscando transformar suas ideias em realidade?", personality: ["Nebula"], opposite: ["Crystallus"] },
+                { text: "Prefere ter controle sobre sua vida e evitar imprevistos?", personality: ["Petrus"], opposite: ["Fulmen"] },
+                { text: "Gosta de fazer novas descobertas e explorar o desconhecido?", personality: ["Entia"], opposite: ["Lunaris"] },
+                { text: "É apaixonado por seguir suas próprias regras, sem se importar com convenções?", personality: ["Fulmen"], opposite: ["Terrae"] },
+                { text: "É otimista e acredita que sempre há algo positivo em cada situação?", personality: ["Solaris"], opposite: ["Serenus"] },
+                { text: "Valoriza muito a lealdade e o apoio dos outros ao seu redor?", personality: ["Aqua"], opposite: ["Lunaris"] },
+                { text: "Prefere ambientes calmos e tranquilos ao invés de locais agitados?", personality: ["Serenus"], opposite: ["Flamma"] },
+                { text: "Sente que a disciplina e a persistência são essenciais para alcançar seus objetivos?", personality: ["Crystallus"], opposite: ["Entia"] },
+                { text: "Acredita que a emoção e a intuição são mais importantes que a lógica?", personality: ["Lunaris"], opposite: ["Petrus"] },
+                { text: "Costuma ser mais analítico e crítico, sempre questionando tudo ao seu redor?", personality: ["Petrus"], opposite: ["Natura"] },
+                { text: "Tende a ser um bom mediador e busca sempre a harmonia nas relações?", personality: ["Serenus"], opposite: ["Crystallus"] },
+                { text: "Sente que sua criatividade e inovação são sua maior força?", personality: ["Fulmen"], opposite: ["Natura"] },
+                { text: "Você sente uma forte conexão emocional com as pessoas ao seu redor?", personality: ["Aqua"], opposite: ["Solaris"] },
+                { text: "Você é mais introvertido e sente-se confortável em ambientes familiares e tranquilos?", personality: ["Lunaris"], opposite: ["Fulmen"] },
+                { text: "Você costuma ser impulsivo e age no calor do momento?", personality: ["Flamma"], opposite: ["Serenus"] },
+                { text: "Você valoriza muito a estabilidade emocional e busca sempre o equilíbrio?", personality: ["Serenus"], opposite: ["Aqua"] }
+            ];
+    
+            const personalities = {
+                Flamma: {
+                   image: "Flamma.png",
+                    description: "É audacioso, impetuoso e corajoso. Tem uma energia vibrante e um espírito de líder natural, sempre disposto a se lançar em novas aventuras. É movido pela paixão e pela determinação.",
+                    feelings: " Sente uma intensa necessidade de conquista e superação, e sua coragem o impulsiona a agir sem medo das consequências.",
+                    advantages: "Coragem, energia, criatividade.",
+                    disadvantages: "Impulsividade, falta de paciência."
+                },
+                Terrae: {
+                   image: "Terrae.png",
+                    description: "Terrae é calmo, estável e introvertido. Ele prefere ambientes tranquilos e está sempre em busca de estabilidade e harmonia.",
+                    feelings: "Terrae sente-se confortável com a estabilidade e prefere ambientes tranquilos. Suas emoções são serenas e equilibradas.",
+                    advantages: "Paciência, estabilidade, confiabilidade.",
+                    disadvantages: "Falta de ambição, resistência à mudança."
+                },
+                Solaris: {
+                   image: "Solaris.png",
+                    description: "Solaris é otimista, extrovertido e cheio de energia. Ele sempre busca ver o lado positivo das coisas e é altamente motivado a realizar seus objetivos.",
+                    feelings: "Solaris sente que o futuro é brilhante e que as oportunidades são infinitas. Ele busca sempre a felicidade e a realização.",
+                    advantages: "Energia positiva, otimismo, habilidade de inspirar os outros.",
+                    disadvantages: "Superficialidade, falta de foco em detalhes."
+                },
+                Natura: {
+                    image:"Natura.png",
+                    description: "Natura é sensível, intuitivo e empático. Ele tem uma conexão profunda com a natureza e com seus sentimentos. Busca harmonia e equilíbrio em tudo.",
+                    feelings: "Natura sente a necessidade de estar em sintonia com o mundo ao seu redor, priorizando seus sentimentos e a paz interior.",
+                    advantages: "Empatia, criatividade, sensibilidade.",
+                    disadvantages: "Excessiva sensibilidade, propensão à indecisão."
+                },
+                Serenus: {
+                   image: "Serenus.png",
+                    description: "Serenus é calmo, equilibrado e reflexivo. Ele valoriza a paz e a serenidade, evitando o estresse e a pressão. Prefere analisar antes de agir.",
+                    feelings: "Serenus busca harmonia em todos os aspectos da vida e sente que a tranquilidade é essencial para seu bem-estar.",
+                    advantages: "Calmaria, sabedoria, paciência.",
+                    disadvantages: "Passividade, falta de iniciativa."
+                },
+                Aqua: {
+                   image: "Aqua.png",
+                    description: "Aqua é adaptável, emotivo e fluido. Ele sabe se ajustar a qualquer situação, mostrando grande compreensão e flexibilidade.",
+                    feelings: "Aqua sente uma forte conexão emocional com os outros e busca harmonia nos relacionamentos.",
+                    advantages: "Empatia, flexibilidade, capacidade de se adaptar.",
+                    disadvantages: "Sensibilidade excessiva, indecisão."
+                },
+                Lunaris: {
+                    image: "Lunaris.png",
+                    description: "Lunaris é introspectivo, misterioso e reflexivo. Ele tem uma conexão profunda com seu mundo interior e tende a ser mais reservado.",
+                    feelings: "Lunaris sente a necessidade de refletir sobre suas emoções e encontra conforto na solidão e na introspecção.",
+                    advantages: "Criatividade, profundidade emocional, introspecção.",
+                    disadvantages: "Isolamento, tendência a se perder em seus próprios pensamentos."
+                },
+                Crystallus: {
+                   image: "Crystallus.png",
+                    description: "Crystallus é analítico, detalhista e meticuloso. Ele busca precisão em tudo o que faz e valoriza a lógica e a estrutura.",
+                    feelings: "Crystallus sente a necessidade de controlar o ambiente ao seu redor e se destaca pela racionalidade.",
+                    advantages: "Lógica, organização, habilidade em resolver problemas.",
+                    disadvantages: "Rigidez, dificuldade em lidar com mudanças."
+                },
+                Petrus: {
+                   image: "Petrus.png",
+                    description: "Petrus é prático, determinado e focado. Ele adora desafios que exigem esforço e paciência. Prefere uma abordagem concreta e realista.",
+                    feelings: "Petrus sente que a disciplina e o trabalho árduo são essenciais para alcançar seus objetivos.",
+                    advantages: "Determinação, foco, disciplina.",
+                    disadvantages: "Teimosia, resistência a mudanças."
+                },
+                Fulmen: {
+                   image: "Fulmen.png",
+                    description: "Fulmen é visionário, criativo e apaixonado. Ele busca sempre transformar o mundo ao seu redor com suas ideias inovadoras.",
+                    feelings: "Fulmen sente uma forte necessidade de expressar suas ideias e lutar por suas crenças.",
+                    advantages: "Criatividade, liderança, visão.",
+                    disadvantages: "Impulsividade, falta de paciência."
+                },
+                Entia: {
+                   image: "Entia.png",
+                    description: "Entia é curioso, aventureiro e ousado. Ele busca sempre novos conhecimentos e experiências, sempre pronto para explorar o desconhecido.",
+                    feelings: "Entia sente um desejo constante de descobrir o novo e expandir seus horizontes.",
+                    advantages: "Curiosidade, coragem, espírito aventureiro.",
+                    disadvantages: "Impulsividade, dificuldade em se comprometer."
+                },
+                Nebula: {
+                   image: "Nebula.png",
+                    description: "Nebula é sonhador, idealista e criativo. Ele busca a perfeição e tem uma visão única do mundo.",
+                    feelings: "Nebula sente que a beleza do mundo está nas ideias e no potencial das pessoas e do universo.",
+                    advantages: "Imaginação, sensibilidade, originalidade.",
+                    disadvantages: "Fuga da realidade, desorganização."
+                }
+            };
+    
+        let currentQuestionIndex = 0;
+        const answers = [];
+        const personalitiesScores = {
+            Flamma: 0,
+            Terrae: 0,
+            Solaris: 0,
+            Natura: 0,
+            Serenus: 0,
+            Aqua: 0,
+            Lunaris: 0,
+            Crystallus: 0,
+            Petrus: 0,
+            Fulmen: 0,
+            Entia: 0,
+            Nebula: 0
+        };
+    
+        const questionText = document.getElementById("question-text");
+    const optionsContainer = document.getElementById("options-container");
+    const nextButton = document.getElementById("next-button");
+    const previousButton = document.getElementById("previous-button");
+    const progressBarFill = document.getElementById("progress-bar-fill");
+    const resultContainer = document.getElementById("result");
+    const buttonsContainer = document.querySelector(".buttons-container");
+    
+    function displayOptions() {
+    optionsContainer.innerHTML = "";
+    const currentQuestion = questions[currentQuestionIndex];
+    const options = ["Concordo Bastante", "Concordo", "Neutro", "Discordo", "Discordo Bastante"];
+    options.forEach((option, index) => {
+        const button = document.createElement("button");
+        button.textContent = option;
+        button.onclick = () => selectOption(index);
+        optionsContainer.appendChild(button);
+
+        // Se já houver uma resposta selecionada, a mantenha visível
+        if (answers[currentQuestionIndex] === index) {
+            button.classList.add("selected");
+        }
+
+        // Aplica a animação de fade nas opções
+        setTimeout(() => {
+            button.style.opacity = 1; // Anima a opacidade das opções
+        }, 1000); // Espera 1 segundo para começar a animação das opções
+    });
+
+    // Aplica a animação de fade na pergunta
+    setTimeout(() => {
+        questionText.style.opacity = 1; // Anima a opacidade da pergunta
+    }, 0);
+}
+    
+    function selectOption(index) {
+        answers[currentQuestionIndex] = index;
+        const selectedButton = optionsContainer.querySelector("button.selected");
+        if (selectedButton) {
+            selectedButton.classList.remove("selected");
+        }
+        const button = optionsContainer.querySelectorAll("button")[index];
+        button.classList.add("selected");
+    
+        // Habilita os botões de navegação após uma opção ser selecionada
+        nextButton.disabled = false;
+        setTimeout(() => {
+            buttonsContainer.style.opacity = 1; // Aparece gradualmente os botões
+        }, 600); // Espera 3 segundos
+    }
+    
+    function nextQuestion() {
+        if (nextButton.disabled) return; // Impede a execução se o botão estiver desativado
+    
+        const currentQuestion = questions[currentQuestionIndex];
+        currentQuestion.personality.forEach(personality => {
+            let percentage = 0;
+            if (answers[currentQuestionIndex] === 0) percentage = 10;
+            if (answers[currentQuestionIndex] === 1) percentage = 5;
+            if (answers[currentQuestionIndex] === 3) percentage = -2;
+            if (answers[currentQuestionIndex] === 4) percentage = -3;
+    
+            personalitiesScores[personality] += percentage;
+    
+            currentQuestion.opposite.forEach(opposite => {
+                let oppositePercentage = 0;
+                if (answers[currentQuestionIndex] === 0) oppositePercentage = -3;
+                if (answers[currentQuestionIndex] === 1) oppositePercentage = -2;
+                if (answers[currentQuestionIndex] === 3) oppositePercentage = 5;
+                if (answers[currentQuestionIndex] === 4) oppositePercentage = 10;
+                personalitiesScores[opposite] += oppositePercentage;
+            });
+        });
+    
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+            loadQuestion();
+        } else {
+            showResult();
+        }
+    }
+    
+    function previousQuestion() {
+        currentQuestionIndex--;
+        loadQuestion();
+    }
+    
+    function loadQuestion() {
+        const currentQuestion = questions[currentQuestionIndex];
+        questionText.textContent = currentQuestion.text;
+        questionText.style.opacity = 0; // Esconde a pergunta inicialmente
+        displayOptions();
+    
+        progressBarFill.style.width = `${(currentQuestionIndex / questions.length) * 100}%`;
+    
+        nextButton.disabled = (answers[currentQuestionIndex] === undefined);  // Desativa o botão "Próximo" se nenhuma resposta foi selecionada
+        previousButton.disabled = currentQuestionIndex === 0;
+        nextButton.textContent = currentQuestionIndex === questions.length - 1 ? "Finalizar" : "Próximo";
+    }
+    
+    function showResult() {
+        const topPersonality = Object.keys(personalitiesScores).reduce((a, b) => personalitiesScores[a] > personalitiesScores[b] ? a : b);
+        const personality = personalities[topPersonality];
+    
+        resultContainer.innerHTML = `
+            <h1>${topPersonality}</h1>
+            <img src="${personality.image}" alt="${personality.name}">
+            <p><strong>Descrição:</strong> ${personality.description}</p>
+            <p><strong>Sentimentos:</strong> ${personality.feelings}</p>
+            <p><strong>Vantagens:</strong> ${personality.advantages}</p>
+            <p><strong>Desvantagens:</strong> ${personality.disadvantages}</p>
+        `;
+        resultContainer.style.display = "block";
+        document.querySelector("#quiz-container").style.display = "none";
+    }
+    
+    nextButton.addEventListener("click", nextQuestion);
+    previousButton.addEventListener("click", previousQuestion);
+    
+    loadQuestion();
+    
+    </script>
+    <p>Copyright © 2024 1nfinite8ooks. All rights reserved.</p>
+    </main>
+</body>
+</html>
