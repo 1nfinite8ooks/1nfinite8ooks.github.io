@@ -32,42 +32,243 @@
     
     <script>
        const questions = [
-                { text: "Sente que prefere agir com audácia, mesmo que haja riscos?", personality: ["Flamma"], opposite: ["Serenus"] },
-                { text: "Valoriza a tranquilidade e sente-se confortável com a estabilidade em sua vida?", personality: ["Terrae"], opposite: ["Solaris"] },
-                { text: "Costuma buscar soluções práticas ao invés de teorias complexas?", personality: ["Natura"], opposite: ["Lunaris"] },
-                { text: "Tende a ser mais racional do que emocional ao tomar decisões?", personality: ["Petrus"], opposite: ["Flamma"] },
-                { text: "Gosta de explorar novos horizontes, sempre buscando desafios e aventuras?", personality: ["Entia"], opposite: ["Serenus"] },
-                { text: "Sente uma forte necessidade de controlar as situações ao seu redor?", personality: ["Crystallus"], opposite: ["Solaris"] },
-                { text: "Em momentos de estresse, tende a buscar o conforto em sua própria companhia?", personality: ["Serenus"], opposite: ["Entia"] },
-                { text: "Tem facilidade para se adaptar rapidamente a novos ambientes?", personality: ["Solaris"], opposite: ["Lunaris"] },
-                { text: "Valoriza muito a lógica e a organização em sua rotina diária?", personality: ["Lunaris"], opposite: ["Entia"] },
-                { text: "Prefere ser independente e tomar suas próprias decisões, sem depender dos outros?", personality: ["Fulmen"], opposite: ["Aqua"] },
-                { text: "Gosta de fazer planos detalhados antes de agir em qualquer situação?", personality: ["Petrus"], opposite: ["Flamma"] },
-                { text: "Sente uma forte conexão com a natureza e a simplicidade da vida?", personality: ["Natura"], opposite: ["Solaris"] },
-                { text: "Acredita que sua maior força é sua habilidade em liderar os outros?", personality: ["Flamma"], opposite: ["Serenus"] },
-                { text: "Busca sempre manter a paz, evitando conflitos e desentendimentos?", personality: ["Serenus"], opposite: ["Fulmen"] },
-                { text: "Prefere pensar antes de agir, avaliando todas as consequências possíveis?", personality: ["Crystallus"], opposite: ["Flamma"] },
-                { text: "Gosta de aprender constantemente e se desafiar intelectualmente?", personality: ["Fulmen"], opposite: ["Natura"] },
-                { text: "Costuma agir impulsivamente, sem pensar muito nas consequências?", personality: ["Flamma"], opposite: ["Petrus"] },
-                { text: "É mais reservado e introvertido, preferindo passar tempo sozinho em vez de socializar?", personality: ["Lunaris"], opposite: ["Solaris"] },
-                { text: "Sente-se confortável com a rotina e com ambientes conhecidos?", personality: ["Terrae"], opposite: ["Entia"] },
-                { text: "Acredita que o futuro é mais importante que o presente?", personality: ["Solaris"], opposite: ["Natura"] },
-                { text: "Costuma ser mais idealista e sonhador, buscando transformar suas ideias em realidade?", personality: ["Nebula"], opposite: ["Crystallus"] },
-                { text: "Prefere ter controle sobre sua vida e evitar imprevistos?", personality: ["Petrus"], opposite: ["Fulmen"] },
-                { text: "Gosta de fazer novas descobertas e explorar o desconhecido?", personality: ["Entia"], opposite: ["Lunaris"] },
-                { text: "É apaixonado por seguir suas próprias regras, sem se importar com convenções?", personality: ["Fulmen"], opposite: ["Terrae"] },
-                { text: "É otimista e acredita que sempre há algo positivo em cada situação?", personality: ["Solaris"], opposite: ["Serenus"] },
-                { text: "Valoriza muito a lealdade e o apoio dos outros ao seu redor?", personality: ["Aqua"], opposite: ["Lunaris"] },
-                { text: "Prefere ambientes calmos e tranquilos ao invés de locais agitados?", personality: ["Serenus"], opposite: ["Flamma"] },
-                { text: "Sente que a disciplina e a persistência são essenciais para alcançar seus objetivos?", personality: ["Crystallus"], opposite: ["Entia"] },
-                { text: "Acredita que a emoção e a intuição são mais importantes que a lógica?", personality: ["Lunaris"], opposite: ["Petrus"] },
-                { text: "Costuma ser mais analítico e crítico, sempre questionando tudo ao seu redor?", personality: ["Petrus"], opposite: ["Natura"] },
-                { text: "Tende a ser um bom mediador e busca sempre a harmonia nas relações?", personality: ["Serenus"], opposite: ["Crystallus"] },
-                { text: "Sente que sua criatividade e inovação são sua maior força?", personality: ["Fulmen"], opposite: ["Natura"] },
-                { text: "Você sente uma forte conexão emocional com as pessoas ao seu redor?", personality: ["Aqua"], opposite: ["Solaris"] },
-                { text: "Você é mais introvertido e sente-se confortável em ambientes familiares e tranquilos?", personality: ["Lunaris"], opposite: ["Fulmen"] },
-                { text: "Você costuma ser impulsivo e age no calor do momento?", personality: ["Flamma"], opposite: ["Serenus"] },
-                { text: "Você valoriza muito a estabilidade emocional e busca sempre o equilíbrio?", personality: ["Serenus"], opposite: ["Aqua"] }
+       { 
+        text: "Você se sente confiante em todas as situações, mesmo sem preparação?", 
+        personality: ["Flamma", "Solaris"], 
+        opposite: ["Crystallus", "Nebula"] 
+    },
+    { 
+        text: "Você acha que ajudar os outros é mais importante do que realizar suas próprias ambições?", 
+        personality: ["Nebula", "Aqua"], 
+        opposite: ["Solaris", "Flamma"] 
+    },
+    { 
+        text: "Você se sente desconfortável em mudar um hábito antigo ou uma rotina consolidada?", 
+        personality: ["Terrae", "Petrus"], 
+        opposite: ["Entia", "Natura"] 
+    },
+    { 
+        text: "Você acredita que o equilíbrio e a harmonia são essenciais para sua felicidade?", 
+        personality: ["Serenus", "Terrae"], 
+        opposite: ["Flamma", "Entia"] 
+    },
+    { 
+        text: "Você acha importante construir algo duradouro em vez de buscar mudanças rápidas?", 
+        personality: ["Terrae", "Petrus"], 
+        opposite: ["Entia", "Fulmen"] 
+    },
+    { 
+        text: "Você prefere evitar conflitos e buscar a paz em todas as situações?", 
+        personality: ["Serenus", "Aqua"], 
+        opposite: ["Flamma", "Lunaris"] 
+    },
+    { 
+        text: "Você prefere explorar o desconhecido a se manter na segurança do que já conhece?", 
+        personality: ["Entia", "Natura"], 
+        opposite: ["Crystallus", "Terrae"] 
+    },
+    { 
+        text: "Você prefere agir imediatamente, mesmo que não tenha todas as informações?", 
+        personality: ["Flamma", "Entia"], 
+        opposite: ["Crystallus", "Terrae"] 
+    },
+    { 
+        text: "Você acha importante inspirar outras pessoas com sua confiança e energia?", 
+        personality: ["Solaris", "Entia"], 
+        opposite: ["Petrus", "Crystallus"] 
+    },
+    { 
+        text: "Você acredita que inovar é mais importante do que preservar tradições?", 
+        personality: ["Fulmen", "Entia"], 
+        opposite: ["Terrae", "Petrus"] 
+    },
+    { 
+        text: "Você acredita que estabilidade e conforto são mais valiosos do que aventuras e riscos?", 
+        personality: ["Terrae", "Aqua"], 
+        opposite: ["Entia", "Fulmen"] 
+    },
+    { 
+        text: "Você acha que a liberdade pessoal é mais importante do que seguir tradições ou normas?", 
+        personality: ["Entia", "Fulmen"], 
+        opposite: ["Terrae", "Petrus"] 
+    },
+    { 
+        text: "Você se sente desconfortável quando precisa tomar decisões que podem desagradar alguém?", 
+        personality: ["Serenus", "Nebula"], 
+        opposite: ["Flamma", "Petrus"] 
+    },
+    { 
+        text: "Você prefere sonhar com possibilidades do que se limitar à realidade?", 
+        personality: ["Nebula", "Natura"], 
+        opposite: ["Petrus", "Crystallus"] 
+    },
+    { 
+        text: "Você ficaria desconfortável em abandonar um projeto ou plano antes de concluí-lo?", 
+        personality: ["Petrus", "Crystallus"], 
+        opposite: ["Natura", "Entia"] 
+    },
+    { 
+        text: "Você acredita que proteger quem você ama é mais importante do que alcançar seus objetivos pessoais?", 
+        personality: ["Aqua", "Lunaris"], 
+        opposite: ["Solaris", "Fulmen"] 
+    },
+    { 
+        text: "Você acredita que mudanças profundas são necessárias para o crescimento pessoal?", 
+        personality: ["Lunaris", "Fulmen"], 
+        opposite: ["Crystallus", "Terrae"] 
+    },
+    { 
+        text: "Você acha difícil manter o foco em um único objetivo por muito tempo?", 
+        personality: ["Natura", "Entia"], 
+        opposite: ["Petrus", "Crystallus"] 
+    },
+    { 
+        text: "Você acha difícil lidar com incertezas ou mudanças inesperadas?", 
+        personality: ["Crystallus", "Terrae"], 
+        opposite: ["Natura", "Fulmen"] 
+    },
+    { 
+        text: "Você se sente inspirado em situações que exigem criatividade e pensamento fora da caixa?", 
+        personality: ["Fulmen", "Natura"], 
+        opposite: ["Crystallus", "Terrae"] 
+    },
+    { 
+        text: "Você coloca as necessidades emocionais de outras pessoas acima das suas?", 
+        personality: ["Aqua", "Nebula"], 
+        opposite: ["Flamma", "Petrus"] 
+    },
+    { 
+        text: "Você ficaria entusiasmado com a possibilidade de aprender algo novo todos os dias?", 
+        personality: ["Natura", "Fulmen"], 
+        opposite: ["Terrae", "Aqua"] 
+    },
+    { 
+        text: "Você acredita que os detalhes são tão importantes quanto a visão geral?", 
+        personality: ["Crystallus", "Petrus"], 
+        opposite: ["Entia", "Natura"] 
+    },
+    { 
+        text: "Você prefere objetivos sólidos e duradouros a seguir inspirações momentâneas?", 
+        personality: ["Petrus", "Terrae"], 
+        opposite: ["Entia", "Nebula"] 
+    },
+    { 
+        text: "Você se sente desconfortável quando percebe que alguém próximo está emocionalmente distante?", 
+        personality: ["Aqua", "Serenus"], 
+        opposite: ["Flamma", "Fulmen"] 
+    },
+    { 
+        text: "Você acredita que o esforço contínuo é a chave para alcançar o sucesso?", 
+        personality: ["Petrus", "Crystallus"], 
+        opposite: ["Flamma", "Natura"] 
+    },
+    { 
+        text: "Você prefere ser reconhecido como líder em qualquer ambiente em que esteja?", 
+        personality: ["Solaris", "Flamma"], 
+        opposite: ["Serenus", "Nebula"] 
+    },
+    { 
+        text: "Você se sente desconfortável com compromissos de longo prazo que limitam sua liberdade?", 
+        personality: ["Entia", "Fulmen"], 
+        opposite: ["Petrus", "Solaris"] 
+    },
+    { 
+        text: "Você acredita que as emoções são uma fonte inesgotável de beleza e inspiração?", 
+        personality: ["Nebula", "Lunaris"], 
+        opposite: ["Petrus", "Crystallus"] 
+    },
+    { 
+        text: "Você prefere mudanças rápidas a permanecer muito tempo em uma mesma situação?", 
+        personality: ["Natura", "Entia"], 
+        opposite: ["Petrus", "Solaris"] 
+    },
+    { 
+        text: "Você se sente confortável em assumir riscos emocionais para se conectar profundamente com alguém?", 
+        personality: ["Lunaris", "Aqua"], 
+        opposite: ["Crystallus", "Terrae"] 
+    },
+    { 
+        text: "Você acha que detalhes específicos são menos importantes que a visão geral?", 
+        personality: ["Flamma", "Solaris"], 
+        opposite: ["Crystallus", "Terrae"] 
+    },
+    { 
+        text: "Você acredita que a estabilidade é mais importante que liberdade?", 
+        personality: ["Terrae", "Crystallus"], 
+        opposite: ["Entia", "Fulmen"] 
+    },
+    { 
+        text: "Você acha difícil esperar por algo que deseja muito?", 
+        personality: ["Flamma", "Solaris"], 
+        opposite: ["Terrae", "Petrus"] 
+    },
+    { 
+        text: "Você gosta de ser o centro das atenções, mesmo em situações que não domina completamente?", 
+        personality: ["Solaris", "Natura"], 
+        opposite: ["Terrae", "Crystallus"] 
+    },
+
+     
+       { text: "Você acredita que as dificuldades que enfrenta fazem parte do seu destino e deve enfrentá-las de frente?", 
+        personality: ["Flamma", "Lunaris"], 
+        opposite: ["Natura", "Serenus"] 
+    },
+    { 
+        text: "Você se sentiria confortável em abrir mão de algo que considera essencial, mesmo que beneficie outras pessoas?", 
+        personality: ["Terrae", "Aqua"], 
+        opposite: ["Flamma", "Crystallus"] 
+    },
+    { 
+        text: "Você se empolgaria com uma ideia nova, mesmo que ainda não tenha certeza de como ela funcionará?", 
+        personality: ["Natura", "Entia"], 
+        opposite: ["Crystallus", "Petrus"] 
+    },
+    { 
+        text: "Você ficaria preocupado se alguém querido não compartilhasse seus sentimentos com você?", 
+        personality: ["Aqua", "Nebula"], 
+        opposite: ["Flamma", "Fulmen"] 
+    },
+    { 
+        text: "Você faria tudo o que fosse necessário para garantir que sua presença fosse notada, mesmo que isso significasse sair da sua zona de conforto?", 
+        personality: ["Solaris", "Flamma"], 
+        opposite: ["Serenus", "Nebula"] 
+    },
+    { 
+        text: "Você ficaria frustrado se algo saísse do controle, mesmo que fosse um pequeno imprevisto?", 
+        personality: ["Crystallus", "Petrus"], 
+        opposite: ["Lunaris", "Entia"] 
+    },
+    { 
+        text: "Você se sentiria desconfortável se fosse colocado em uma situação onde tivesse que escolher um lado em um conflito?", 
+        personality: ["Serenus", "Aqua"], 
+        opposite: ["Flamma", "Lunaris"] 
+    },
+    { 
+        text: "Você acredita que as coisas precisam passar por transformação e destruição para que algo novo surja?", 
+        personality: ["Lunaris", "Fulmen"], 
+        opposite: ["Terrae", "Serenus"] 
+    },
+    { 
+        text: "Você preferiria seguir seu coração, mesmo quando a razão indicaria outro caminho?", 
+        personality: ["Entia", "Nebula"], 
+        opposite: ["Crystallus", "Petrus"] 
+    },
+    { 
+        text: "Você aceitaria seguir uma direção que pode ser difícil, mas que acredita ser a mais promissora no longo prazo?", 
+        personality: ["Petrus", "Crystallus"], 
+        opposite: ["Flamma", "Natura"] 
+    },
+    { 
+        text: "Você se sentiria desconfortável se fosse forçado a seguir regras que não entende ou que considera limitantes?", 
+        personality: ["Fulmen", "Natura"], 
+        opposite: ["Terrae", "Serenus"] 
+    },
+    { 
+        text: "Você acreditaria que é possível encontrar beleza e significado em algo aparentemente trivial ou insignificante?", 
+        personality: ["Nebula", "Serenus"], 
+        opposite: ["Petrus", "Crystallus"] 
+    }
+    
             ];
     
             const personalities = {
@@ -225,36 +426,44 @@
         }, 600); // Espera 3 segundos
     }
     
-    function nextQuestion() {
-        if (nextButton.disabled) return; // Impede a execução se o botão estiver desativado
-    
-        const currentQuestion = questions[currentQuestionIndex];
-        currentQuestion.personality.forEach(personality => {
-            let percentage = 0;
-            if (answers[currentQuestionIndex] === 0) percentage = 10;
-            if (answers[currentQuestionIndex] === 1) percentage = 5;
-            if (answers[currentQuestionIndex] === 3) percentage = -2;
-            if (answers[currentQuestionIndex] === 4) percentage = -3;
-    
-            personalitiesScores[personality] += percentage;
-    
-            currentQuestion.opposite.forEach(opposite => {
-                let oppositePercentage = 0;
-                if (answers[currentQuestionIndex] === 0) oppositePercentage = -3;
-                if (answers[currentQuestionIndex] === 1) oppositePercentage = -2;
-                if (answers[currentQuestionIndex] === 3) oppositePercentage = 5;
-                if (answers[currentQuestionIndex] === 4) oppositePercentage = 10;
-                personalitiesScores[opposite] += oppositePercentage;
-            });
+    function nextQuestion() { 
+    if (nextButton.disabled) return; // Impede a execução se o botão estiver desativado
+
+    const currentQuestion = questions[currentQuestionIndex];
+
+    currentQuestion.personality.forEach(personality => {
+        let percentage = 0;
+
+        // Pontuação para a personalidade principal
+        if (answers[currentQuestionIndex] === 0) percentage = 10;
+        if (answers[currentQuestionIndex] === 1) percentage = 5;
+        if (answers[currentQuestionIndex] === 3) percentage = 3; // 3 pontos para "Neutro"
+        if (answers[currentQuestionIndex] === 4) percentage = -10;
+
+        personalitiesScores[personality] += percentage;
+
+        // Pontuação para a personalidade oposta
+        currentQuestion.opposite.forEach(opposite => {
+            let oppositePercentage = 0;
+
+            if (answers[currentQuestionIndex] === 0) oppositePercentage = -10;
+            if (answers[currentQuestionIndex] === 1) oppositePercentage = -5;
+            if (answers[currentQuestionIndex] === 3) oppositePercentage = 3; // 3 pontos para "Neutro"
+            if (answers[currentQuestionIndex] === 4) oppositePercentage = 10;
+
+            personalitiesScores[opposite] += oppositePercentage;
         });
-    
-        currentQuestionIndex++;
-        if (currentQuestionIndex < questions.length) {
-            loadQuestion();
-        } else {
-            showResult();
-        }
+    });
+
+    // Avança para a próxima pergunta ou exibe o resultado
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        loadQuestion();
+    } else {
+        showResult();
     }
+}
+
     
     function previousQuestion() {
         currentQuestionIndex--;
